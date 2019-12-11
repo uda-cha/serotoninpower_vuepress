@@ -25,3 +25,8 @@ Then, add some scripts to package.json:
 $ docker-compose run --rm --service-ports node npm run dev
 ```
 
+## ビルド
+
+```shell
+$ docker-compose run --rm node npm run build
+```

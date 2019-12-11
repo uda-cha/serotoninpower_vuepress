@@ -1,0 +1,6 @@
+---
+home: true
+---
+
+<PostList />
+

@@ -9,5 +9,12 @@ module.exports = {
   },
   head: [
     ['link', { rel: 'icon', href: '/favicon.ico' }]
-  ]
+  ],
+  themeConfig: {
+    sidebar: 'auto',
+    sidebarDepth: 6
+  },
+  markdown: {
+    lineNumbers: true
+  }
 }

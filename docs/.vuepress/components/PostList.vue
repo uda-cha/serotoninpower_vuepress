@@ -26,4 +26,21 @@ export default {
   }
 }
 </script>
+<style lang="stylus" scoped>
+.categories {
+  padding-inline-start: 0;
 
+  .category {
+    display: inline-block;
+    margin: 0 10px 5px;
+
+    span {
+      background-color: #c2d6ba;
+      border-radius: 3px;
+      color: #333;
+      line-height: 1.5;
+      padding: 5px 10px;
+    }
+  }
+}
+</style>

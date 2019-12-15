@@ -3,7 +3,11 @@
   <div>
     <div v-for="post in posts">
       <h2><a v-bind:href="post.path">{{post.title}}</a></h2>
-      <p>{{post.frontmatter.description}}</p>
+      <ul class="categories">
+        <li class="category" v-for="category in post.frontmatter.categories">
+          <span>{{category}}</span>
+        </li>
+      </ul>
       <a v-bind:href="post.path">続きを読む</a>
     </div>
   </div>

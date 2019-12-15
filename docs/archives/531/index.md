@@ -1,5 +1,6 @@
 ---
 title: Linuxで稼働しているuPnPデバイス(ReadyMedia)が他のデバイスから検索できなくなった件とその対処法
+description: "LAN内に建てているミュージックストリーミングサーバ(ReadyMedia)が、なんかいつの間にかデバイスとして探索できなくなっていて困っていました。IPアドレス/ポート番号を直打ちすればReadyMediaのコンテンツへアクセスはできるのですが、どうもuPnPによるデバイスの探索のみがうまくいっていないようでした。やっと原因がわかったのでメモしておきます。"
 author: seroto_nin
 type: post
 date: 2019-01-11T17:50:28+00:00
@@ -13,7 +14,7 @@ categories:
 ---
 # {{this.$page.frontmatter.title}}
 
-LAN内に建てているミュージックストリーミングサーバ(ReadyMedia)が、なんかいつの間にかデバイスとして探索できなくなっていて困っていました。IPアドレス/ポート番号を直打ちすればReadyMediaのコンテンツへアクセスはできるのですが、どうもuPnPによるデバイスの探索のみがうまくいっていないようでした。やっと原因がわかったのでメモしておきます。
+{{this.$page.frontmatter.description}}
 
 <!--more-->
 

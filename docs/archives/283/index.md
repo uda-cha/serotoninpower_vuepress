@@ -1,5 +1,6 @@
 ---
 title: mpdでLinux機をスマホから操作可能なミュージックサーバに(＋SELinuxのお勉強)
+description: "Linux機をファイルサーバにしてそこに音楽をボンボン放り込んでおいて、それをスマホから操作してスピーカーから流せたらいいなということで作りました。mpdサーバーです。"
 author: seroto_nin
 type: post
 date: 2017-11-05T07:50:12+00:00
@@ -12,7 +13,7 @@ categories:
 ---
 # {{this.$page.frontmatter.title}}
 
-Linux機をファイルサーバにしてそこに音楽をボンボン放り込んでおいて、それをスマホから操作してスピーカーから流せたらいいなということで作りました。mpdサーバーです。
+{{this.$page.frontmatter.description}}
 
 <!--more-->
 

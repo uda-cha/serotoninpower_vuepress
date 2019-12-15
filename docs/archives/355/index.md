@@ -1,5 +1,6 @@
 ---
 title: Powershellでパスを変数に格納したプログラムの実行
+description: "複数のflacファイルにアートワークを埋め込む作業をmetaflacとPowershellでやってたんですが、Poweshellのスクリプト文中でパスを変数に格納したプログラムを実行しようとした際にはまりました。"
 author: seroto_nin
 type: post
 date: 2018-01-20T06:15:27+00:00
@@ -10,7 +11,9 @@ categories:
 ---
 # {{this.$page.frontmatter.title}}
 
-複数のflacファイルにアートワークを埋め込む作業をmetaflacとPowershellでやってたんですが、Poweshellのスクリプト文中でパスを変数に格納したプログラムを実行しようとした際にはまりました。<!--more-->
+{{this.$page.frontmatter.description}}
+
+<!--more-->
 
 ## 結論
 

@@ -1,5 +1,6 @@
 ---
 title: xrdpでWindows機からLinux機へRDP接続
+description: "自宅のCentOS機は、普段Windows機からsshログインしCUIで操作していますが、ときたまGUIを使いたくなる時があります。そのときたまのためにCentOS機からもモニターにHDMIケーブルを刺しているんですが、モニターのHDMIポートが2つしかないうえに、ほとんどGUIを使わないのでポートを占有するのがもったいない。なのでHDMIケーブルをひっこぬき、必要なときだけWindows機からリモートでGUIを扱えるようにしたいと思ったのが本投稿のきっかけ。"
 author: seroto_nin
 type: post
 date: 2017-08-21T12:50:29+00:00
@@ -14,7 +15,7 @@ categories:
 
 <span style="color: #ff0000;">20180415 ｢SELinuxのポリシー作成(geoclue_t→unconfined_service_tへのアクセス制御緩和)｣と｢カラープロファイルを作成するには認証が必要です｣の解消を追記しました。</span>
 
-自宅のCentOS機は、普段Windows機からsshログインしCUIで操作していますが、ときたまGUIを使いたくなる時があります。そのときたまのためにCentOS機からもモニターにHDMIケーブルを刺しているんですが、モニターのHDMIポートが2つしかないうえに、ほとんどGUIを使わないのでポートを占有するのがもったいない。なのでHDMIケーブルをひっこぬき、必要なときだけWindows機からリモートでGUIを扱えるようにしたいと思ったのが本投稿のきっかけ。
+{{this.$page.frontmatter.description}}
 
 <!--more-->
 

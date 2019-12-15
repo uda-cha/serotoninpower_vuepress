@@ -1,5 +1,6 @@
 ---
 title: あたらしいぱそこそつくりました
+description: "あ"
 author: seroto_nin
 type: post
 date: 2017-06-25T02:58:18+00:00
@@ -10,7 +11,7 @@ categories:
 ---
 # {{this.$page.frontmatter.title}}
 
-あ
+{{this.$page.frontmatter.description}}
 
 ![IMG_20170624_110749-225x300.jpg](./IMG_20170624_110749-225x300.jpg)
 

@@ -1,5 +1,6 @@
 ---
 title: 既に動いてるdockerコンテナのボリュームを後から永続化する
+description: "とりあえず動かしてみるか～って動かしたコンテナをそのまま本利用に移したいときなど、ボリューム永続化を忘れていてあとから永続化したいということってありますよね。その手順をメモします。今回はZabbix Applianceコンテナのボリュームを永続化します。"
 author: seroto_nin
 type: post
 date: 2019-06-15T08:48:21+00:00
@@ -11,7 +12,7 @@ categories:
 ---
 # {{this.$page.frontmatter.title}}
 
-とりあえず動かしてみるか～って動かしたコンテナをそのまま本利用に移したいときなど、ボリューム永続化を忘れていてあとから永続化したいということってありますよね。その手順をメモします。今回はZabbix Applianceコンテナのボリュームを永続化します。
+{{this.$page.frontmatter.description}}
 
 <!--more-->
 

@@ -1,5 +1,6 @@
 ---
 title: マストドン導入について①
+description: "マストドンを導入しようと奮起中。調べていくと大幅な環境変更が必要で、とても2、３日でできるものじゃなさそうなので、検討事項をメモ。"
 author: seroto_nin
 type: post
 date: 2017-04-16T02:06:51+00:00
@@ -10,7 +11,7 @@ categories:
 ---
 # {{this.$page.frontmatter.title}}
 
-マストドンを導入しようと奮起中。調べていくと大幅な環境変更が必要で、とても2、３日でできるものじゃなさそうなので、検討事項をメモ。
+{{this.$page.frontmatter.description}}
 
 <!--more-->
 

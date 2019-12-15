@@ -1,5 +1,6 @@
 ---
 title: Windows版Squidについて
+description: "ラズパイでSquid立ててからもプロキシサーバSquidについてはいろいろ勉強してます。きょうはWindows版のSquidについて。Windows版はドキュメント少ないわ古いわで動作検証が大変でした。"
 author: seroto_nin
 type: post
 date: 2017-09-09T17:36:45+00:00
@@ -11,7 +12,7 @@ categories:
 ---
 # {{this.$page.frontmatter.title}}
 
-ラズパイでSquid立ててからもプロキシサーバSquidについてはいろいろ勉強してます。きょうはWindows版のSquidについて。Windows版はドキュメント少ないわ古いわで動作検証が大変でした。
+{{this.$page.frontmatter.description}}
 
 <!--more-->
 

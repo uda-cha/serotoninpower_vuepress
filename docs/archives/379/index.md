@@ -1,5 +1,6 @@
 ---
 title: MS公式提供のWindows7のvagrant boxでWindows７の仮想環境を構築する
+description: "Vagrant CloudにはMS公式のWindows10のVagrant Boxがあります。でもWindows7はないっぽい。と思ったらMS公式のサイトにあった。それを使ってWindows7の仮想マシンをVagrantで構築する手順のメモ。Vagrantfileがちょっとめんどくさい。"
 author: seroto_nin
 type: post
 date: 2018-02-25T08:02:44+00:00

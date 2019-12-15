@@ -1,5 +1,6 @@
 ---
 title: CentOS7のUSBインストールメディア関連で躓いた話
+description: "私が物理PCにlinuxをインストールする際は、いつもUSBメモリでブートメディアを作ってます。Windowsでisoイメージを落としてきて、それをUSBメモリにUNetbootinを使って燒き、対象のPCの起動デバイス読み込み順をBIOSから変更し、USBぶっさして起動するといった流れです。なんのことはないんですけど、今回のあたらしいぱそこそにCentOS7をインストールする際にうまくいかんかった。"
 author: seroto_nin
 type: post
 date: 2017-06-25T13:23:01+00:00
@@ -11,7 +12,7 @@ categories:
 ---
 # {{this.$page.frontmatter.title}}
 
-私が物理PCにlinuxをインストールする際は、いつもUSBメモリでブートメディアを作ってます。Windowsでisoイメージを落としてきて、それをUSBメモリにUNetbootinを使って燒き、対象のPCの起動デバイス読み込み順をBIOSから変更し、USBぶっさして起動するといった流れです。なんのことはないんですけど、今回のあたらしいぱそこそにCentOS7をインストールする際にうまくいかんかった。
+{{this.$page.frontmatter.description}}
   
 <!--more-->
 

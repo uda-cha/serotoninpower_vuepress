@@ -1,5 +1,6 @@
 ---
 title: インドからのsshdへの不正アクセスについて
+description: "ぼーっとjournalctlでログを眺めていたらこんなことになっていた。"
 author: seroto_nin
 type: post
 date: 2017-05-03T05:36:51+00:00
@@ -11,7 +12,7 @@ categories:
 ---
 # {{this.$page.frontmatter.title}}
 
-ぼーっとjournalctlでログを眺めていたらこんなことになっていた。
+{{this.$page.frontmatter.description}}
 
 <!--more-->
 

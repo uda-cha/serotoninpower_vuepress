@@ -1,5 +1,6 @@
 ---
 title: Linux機の既存データ領域の冗長化(LVM RAID logical volume)
+description: "自宅のファイルサーバのHDDを(一部)冗長化しました。感情がなさすぎて前置きがこれ以上書けない。"
 author: seroto_nin
 type: post
 date: 2017-10-28T17:34:36+00:00
@@ -12,7 +13,7 @@ categories:
 ---
 # {{this.$page.frontmatter.title}}
 
-自宅のファイルサーバのHDDを(一部)冗長化しました。感情がなさすぎて前置きがこれ以上書けない。
+{{this.$page.frontmatter.description}}
   
 <!--more-->
 

@@ -1,5 +1,6 @@
 ---
 title: Windows+VirtualBox+Vagrant
+description: "最近会社で仮想マシンつくっては壊してつくっては壊してって作業が増えてきて、もう手作業じゃやってられないのでVagrantをためしてみました。作って壊してならDockerがぴったりだしおうちで使ってるから学習コスト低くてええやんって思ったんだけど、会社のPCに入れていい仮想環境はVirtualBoxだけで、直にDockerをいれちゃいけないので仕方なくこうなりました。もうこころがしんどいよ。"
 author: seroto_nin
 type: post
 date: 2017-08-07T15:12:01+00:00
@@ -13,7 +14,7 @@ categories:
 ---
 # {{this.$page.frontmatter.title}}
 
-最近会社で仮想マシンつくっては壊してつくっては壊してって作業が増えてきて、もう手作業じゃやってられないのでVagrantをためしてみました。作って壊してならDockerがぴったりだしおうちで使ってるから学習コスト低くてええやんって思ったんだけど、会社のPCに入れていい仮想環境はVirtualBoxだけで、直にDockerをいれちゃいけないので仕方なくこうなりました。もうこころがしんどいよ。
+{{this.$page.frontmatter.description}}
   
 <!--more-->
 

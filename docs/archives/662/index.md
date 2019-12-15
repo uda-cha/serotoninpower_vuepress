@@ -1,5 +1,6 @@
 ---
 title: ZabbixでpreforkなApacheをhttpsのmod_status経由で監視する
+description: "Zabbixで個別アプリケーションを監視しよう第3弾。ApacheはZabbixのビルトインのテンプレートに入ってますが、なんとシンプルチェックでHTTP、HTTPSそれぞれのサービスが稼働しているかどうかしか監視してくれない。なのでより細かく監視ができるテンプレートを導入します。んで導入にあたってHSTSなApacheを監視できなかったのでそれにも対応しました。"
 author: seroto_nin
 type: post
 date: 2019-04-27T17:39:01+00:00
@@ -11,7 +12,7 @@ categories:
 ---
 # {{this.$page.frontmatter.title}}
 
-Zabbixで個別アプリケーションを監視しよう第3弾。ApacheはZabbixのビルトインのテンプレートに入ってますが、なんとシンプルチェックでHTTP、HTTPSそれぞれのサービスが稼働しているかどうかしか監視してくれない。なのでより細かく監視ができるテンプレートを導入します。んで導入にあたってHSTSなApacheを監視できなかったのでそれにも対応しました。
+{{this.$page.frontmatter.description}}
 
 <!--more-->
 

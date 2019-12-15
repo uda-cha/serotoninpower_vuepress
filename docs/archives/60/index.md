@@ -1,5 +1,6 @@
 ---
 title: マストドンのアップデート手順
+description: "docker環境で動かしているマストドンを1.2.2から1.3.2へアップデートしたので手順をメモしておきます。"
 author: seroto_nin
 type: post
 date: 2017-04-30T09:46:06+00:00
@@ -10,7 +11,9 @@ categories:
 ---
 # {{this.$page.frontmatter.title}}
 
-docker環境で動かしているマストドンを1.2.2から1.3.2へアップデートしたので手順をメモしておきます。基本的には以下の公式ドキュメントの通り。
+{{this.$page.frontmatter.description}}
+
+基本的には以下の公式ドキュメントの通り。
 
 <https://github.com/tootsuite/documentation/blob/master/Running-Mastodon/Docker-Guide.md>
 

@@ -1,5 +1,6 @@
 ---
 title: マストドン導入について②
+description: "centOS 7上でApacheをすでに動かしている環境でマストドンを稼働させました。公式ではホスト側のWebサーバとしてnginxがおすすめされていますが、結局Apacheのリバースプロキシ機能でマストドンとWordPressを同居させることにしました。ちなみにメール周りが未設定なので、完了し次第追記します。まだアカウント登録はできません。"
 author: seroto_nin
 type: post
 date: 2017-04-23T13:41:19+00:00
@@ -10,7 +11,7 @@ categories:
 ---
 # {{this.$page.frontmatter.title}}
 
-centOS 7上でApacheをすでに動かしている環境でマストドンを稼働させました。公式ではホスト側のWebサーバとしてnginxがおすすめされていますが、結局Apacheのリバースプロキシ機能でマストドンとWordPressを同居させることにしました。ちなみにメール周りが未設定なので、完了し次第追記します。まだアカウント登録はできません。
+{{this.$page.frontmatter.description}}
 
 <!--more-->
 

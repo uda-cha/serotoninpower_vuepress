@@ -1,5 +1,6 @@
 ---
 title: Linuxで指定時間内にログに特定の文字列が現れるかどうかをコマンドで監視する(ReadyMediaのDB更新バッチ)
+description: "以下の記事にReadyMediaでミュージックストリーミングサーバを構築する手順を書きました。ReadyMediaは、新しい音楽を新規追加してもサムネイルが自動登録されません。追加の都度DBの更新が必要になります。それをバッチ化したのでメモ。ログを監視してシェルスクリプトによる非同期処理の待ち合わせを行っています。"
 author: seroto_nin
 type: post
 date: 2019-06-17T14:35:36+00:00
@@ -11,7 +12,7 @@ categories:
 ---
 # {{this.$page.frontmatter.title}}
 
-以下の記事にReadyMediaでミュージックストリーミングサーバを構築する手順を書きました。ReadyMediaは、新しい音楽を新規追加してもサムネイルが自動登録されません。追加の都度DBの更新が必要になります。それをバッチ化したのでメモ。ログを監視してシェルスクリプトによる非同期処理の待ち合わせを行っています。
+{{this.$page.frontmatter.description}}
 
 [CentOS7でReadyMedia(MiniDLNA)を使ってDLNAミュージックストリーミングサーバを作る](https://www.serotoninpower.club/archives/440)
 

@@ -1,5 +1,8 @@
 ---
 title: シェルスクリプトでWordPressまるごとバックアップ
+description: "20190306 リストア手順について追記
+
+SSIA。`/etc/httpd/*`と`/var/www/html/*`のファイルを丸ごとtar&gzで固めてバックアップするのと、MariaDBのデータをmysqldumpを使って全テーブルオンラインバックアップするのと、6カ月たったバックアップファイルを検索して削除するスクリプトです。これをcrontabに登録して月一くらいで実行するようにします。"
 author: seroto_nin
 type: post
 date: 2019-02-22T18:11:33+00:00
@@ -13,9 +16,7 @@ categories:
 ---
 # {{this.$page.frontmatter.title}}
 
-20190306 リストア手順について追記
-
-SSIA。`/etc/httpd/*`と`/var/www/html/*`のファイルを丸ごとtar&gzで固めてバックアップするのと、MariaDBのデータをmysqldumpを使って全テーブルオンラインバックアップするのと、6カ月たったバックアップファイルを検索して削除するスクリプトです。これをcrontabに登録して月一くらいで実行するようにします。
+{{this.$page.frontmatter.description}}
 
 <!--more-->
 

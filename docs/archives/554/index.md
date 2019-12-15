@@ -1,5 +1,6 @@
 ---
 title: Ansible+dockerでZabbix applianceを立ててエージェント監視を行う
+description: "OSSの監視サーバソフトウェアとして有名なZabbixは、通常Maria DBなどのデータベースサーバ、httpdなどのWebサーバ、Zabbixアプリケーションサーバを立て、phpをインストールして、などと複数のコンポーネントを組み合わせて構築する必要がありますが、公式がZabbix applianceなる全部入りのOSイメージを展開しています。さらに、OSイメージだけではなくdockerイメージとしても配布されているため、今回はdockerを作ってZabbixを構築し、エージェント監視を行うまでをAnsibleでやりました。ZabbixサーバのコンテナをインストールしたdockerホストにインストールしたエージェントとZabbixサーバの疎通に若干手間取ったので、それもメモします。"
 author: seroto_nin
 type: post
 date: 2019-02-12T16:21:41+00:00
@@ -15,7 +16,7 @@ categories:
 ---
 # {{this.$page.frontmatter.title}}
 
-OSSの監視サーバソフトウェアとして有名なZabbixは、通常Maria DBなどのデータベースサーバ、httpdなどのWebサーバ、Zabbixアプリケーションサーバを立て、phpをインストールして、などと複数のコンポーネントを組み合わせて構築する必要がありますが、公式がZabbix applianceなる全部入りのOSイメージを展開しています。さらに、OSイメージだけではなくdockerイメージとしても配布されているため、今回はdockerを作ってZabbixを構築し、エージェント監視を行うまでをAnsibleでやりました。ZabbixサーバのコンテナをインストールしたdockerホストにインストールしたエージェントとZabbixサーバの疎通に若干手間取ったので、それもメモします。
+{{this.$page.frontmatter.description}}
 
 <!--more-->
 

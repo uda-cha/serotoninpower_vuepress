@@ -1,5 +1,6 @@
 ---
 title: Raspberry Pi 3にUbuntu MATEでSquidによる広告ブロックプロキシサーバを構築 by Ansible
+description: "タイトルがホモのよくばりセットみたいになっとる。ラズパイ3を買ったのでそれで広告ブロック用のプロキシサーバをはやりの構築自動化ツールAnsibleを使って構築してみました。お前またパソコン買ったのかよ。"
 author: seroto_nin
 type: post
 date: 2017-08-27T10:13:10+00:00
@@ -14,7 +15,7 @@ categories:
 ---
 # {{this.$page.frontmatter.title}}
 
-タイトルがホモのよくばりセットみたいになっとる。ラズパイ3を買ったのでそれで広告ブロック用のプロキシサーバをはやりの構築自動化ツールAnsibleを使って構築してみました。お前またパソコン買ったのかよ。
+{{this.$page.frontmatter.description}}
 
 <!--more-->
 

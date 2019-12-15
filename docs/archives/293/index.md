@@ -1,5 +1,6 @@
 ---
 title: プロキシ環境下のCentOSでyumだけプロキシを経由させない
+description: "通常のインターネットアクセスはプロキシ環境下で行い、yumだけはプロキシを通さないという設定が某クラウド基盤上でサーバを構築する際に必要になりました。ちょっとはまったのでメモ。"
 author: seroto_nin
 type: post
 date: 2017-12-03T10:19:53+00:00
@@ -10,7 +11,7 @@ categories:
 ---
 # {{this.$page.frontmatter.title}}
 
-通常のインターネットアクセスはプロキシ環境下で行い、yumだけはプロキシを通さないという設定が某クラウド基盤上でサーバを構築する際に必要になりました。ちょっとはまったのでメモ。
+{{this.$page.frontmatter.description}}
 
 <!--more-->
 

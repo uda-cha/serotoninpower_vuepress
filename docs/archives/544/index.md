@@ -1,5 +1,6 @@
 ---
 title: ドメイン検証方式｢TLS-SNI-01｣に脆弱性が見つかったのでCertbotのコマンドをいじろうと思ったけどいじらなくてよかった話
+description: "このブログサーバのSSL/TLS証明書は、Certbotというツールを使い、`Let’s Encrypt`というCAから自動で発行/更新してもらっていました。2019年1月18日に`Let’s Encrypt`からこんなメールがきたので対応しました。"
 author: seroto_nin
 type: post
 date: 2019-01-18T19:06:13+00:00
@@ -13,7 +14,7 @@ categories:
 ---
 # {{this.$page.frontmatter.title}}
 
-このブログサーバのSSL/TLS証明書は、Certbotというツールを使い、`Let’s Encrypt`というCAから自動で発行/更新してもらっていました。2019年1月18日に`Let’s Encrypt`からこんなメールがきたので対応しました。
+{{this.$page.frontmatter.description}}
 
 <!--more-->
 

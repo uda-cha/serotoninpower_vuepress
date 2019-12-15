@@ -1,5 +1,6 @@
 ---
 title: WordPressをdocker-compose(nginx + php-fpm + MySQL + certbot)で構築する(https対応)
+description: "最近はずっとこれやってました。dockerをきちんと勉強したかったのと、度重なるApacheやWordPressの脆弱性対応のバージョンアップ作業にうんざりしていたため、Apacheをやめてnginxを使おう&ぶっ壊しやすいdockerにしようということで。環境を選ばず構築できるよう、https対応もdocker-composeでやります。"
 author: seroto_nin
 type: post
 date: 2019-07-27T18:06:59+00:00
@@ -14,7 +15,7 @@ categories:
 ---
 # {{this.$page.frontmatter.title}}
 
-最近はずっとこれやってました。dockerをきちんと勉強したかったのと、度重なるApacheやWordPressの脆弱性対応のバージョンアップ作業にうんざりしていたため、Apacheをやめてnginxを使おう&ぶっ壊しやすいdockerにしようということで。環境を選ばず構築できるよう、https対応もdocker-composeでやります。
+{{this.$page.frontmatter.description}}
 
 <!--more-->
 

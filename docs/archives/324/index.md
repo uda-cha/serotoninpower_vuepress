@@ -1,5 +1,6 @@
 ---
 title: OWASP ZAPでWebAP脆弱性診断
+description: "プラットフォーム脆弱性診断に続き今度はWebAP脆弱性診断。今回はOWASP ZAP(Open Web Application Security Project Zed Attack Proxy)というOSSのツールを使います。このツールは脆弱性診断研究会さまの講習会で勉強させてもらいました。"
 author: seroto_nin
 type: post
 date: 2017-12-24T09:15:47+00:00

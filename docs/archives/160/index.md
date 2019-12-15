@@ -1,5 +1,6 @@
 ---
 title: LAN内から認証なしでアクセスできるsambaサーバの構築
+description: "LPIC 202の勉強がてらSambaサーバ構築してみました。Sambaとは簡単に言うとWindowsからアクセスできるファイルサーバです。Active Directoryのドメインコントローラにもなれたりするらしいですが難しそうなのでいったん置いておきます。"
 author: seroto_nin
 type: post
 date: 2017-07-09T15:19:58+00:00

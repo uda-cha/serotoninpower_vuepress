@@ -1,5 +1,6 @@
 ---
 title: ApacheのCustomLogとTransferLogの違い
+description: "この二つの違いがあんまりわかっていなかった上に、適当にApacheを設定していたせいで両方とも有効になっていて気持ち悪かったので、調べたことをメモしておきます。結論から言うと私はCustomLogだけでログを定義することにしました。"
 author: seroto_nin
 type: post
 date: 2019-06-14T17:11:00+00:00
@@ -11,7 +12,7 @@ categories:
 ---
 # {{this.$page.frontmatter.title}}
 
-この二つの違いがあんまりわかっていなかった上に、適当にApacheを設定していたせいで両方とも有効になっていて気持ち悪かったので、調べたことをメモしておきます。結論から言うと私はCustomLogだけでログを定義することにしました。
+{{this.$page.frontmatter.description}}
 
 <!--more-->
 

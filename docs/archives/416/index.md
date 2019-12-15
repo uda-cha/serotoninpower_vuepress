@@ -1,5 +1,6 @@
 ---
 title: PowershellのXPathNavigatorでXMLパース
+description: "仕事でやったことのメモ。XMLファイルで記述された文書をPowerhsellでパースし、必要な情報を取り出す方法です。"
 author: seroto_nin
 type: post
 date: 2018-04-30T15:31:21+00:00
@@ -10,7 +11,7 @@ categories:
 ---
 # {{this.$page.frontmatter.title}}
 
-仕事でやったことのメモ。XMLファイルで記述された文書をPowerhsellでパースし、必要な情報を取り出す方法です。
+{{this.$page.frontmatter.description}}
 
 <!--more-->
 

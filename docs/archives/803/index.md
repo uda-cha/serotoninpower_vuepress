@@ -1,5 +1,6 @@
 ---
 title: '[Ruby]配列に格納したメソッドをObject#sendで実行する'
+description: "諸事情あって複数のメソッドを一つずつ実行する必要がありました。いいやり方を見つけるのに時間がかかった & これがベストかわからないためメモしておきます。"
 author: seroto_nin
 type: post
 date: 2019-11-05T15:02:08+00:00
@@ -10,7 +11,7 @@ categories:
 ---
 # {{this.$page.frontmatter.title}}
 
-諸事情あって複数のメソッドを一つずつ実行する必要がありました。いいやり方を見つけるのに時間がかかった & これがベストかわからないためメモしておきます。
+{{this.$page.frontmatter.description}}
 
 <!--more-->
 

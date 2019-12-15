@@ -1,5 +1,6 @@
 ---
 title: Let’s Encryptで発行したSSL証明書の更新失敗(Google CTログエラー・20181201)
+description: "このブログのWebサーバにアクセスできない事象が発生していました。確認できたのは12月2日の0時くらいです。原因がわかったのでメモしておきます。"
 author: seroto_nin
 type: post
 date: 2018-12-01T17:08:30+00:00
@@ -11,7 +12,7 @@ categories:
 ---
 # {{this.$page.frontmatter.title}}
 
-このブログのWebサーバにアクセスできない事象が発生していました。確認できたのは12月2日の0時くらいです。原因がわかったのでメモしておきます。
+{{this.$page.frontmatter.description}}
 
 <!--more-->
 

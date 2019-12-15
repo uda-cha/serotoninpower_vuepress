@@ -1,5 +1,6 @@
 ---
 title: WordPress用 Apache/2.4.6 設定まとめ(2019/04/21)
+description: "今時点でのApacheの設定を総まとめします。私のApcheの設定ファイルは、これまでいろいろ手を加えて育ってきているので、それを棚卸しようかと思い記述します。"
 author: seroto_nin
 type: post
 date: 2019-04-23T16:47:46+00:00
@@ -10,7 +11,7 @@ categories:
 ---
 # {{this.$page.frontmatter.title}}
 
-今時点でのApacheの設定を総まとめします。私のApcheの設定ファイルは、これまでいろいろ手を加えて育ってきているので、それを棚卸しようかと思い記述します。
+{{this.$page.frontmatter.description}}
 
 <!--more-->
 

@@ -1,5 +1,6 @@
 ---
 title: 近況(20180715)
+description: "もう残業したくない。忙しすぎてブログ書いてなかったです。いろいろやってたことのまとめ。"
 author: seroto_nin
 type: post
 date: 2018-07-15T15:26:03+00:00
@@ -12,7 +13,7 @@ categories:
 ---
 # {{this.$page.frontmatter.title}}
 
-もう残業したくない。忙しすぎてブログ書いてなかったです。いろいろやってたことのまとめ。
+{{this.$page.frontmatter.description}}
 
 <!--more-->
 

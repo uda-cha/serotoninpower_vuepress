@@ -1,5 +1,6 @@
 ---
 title: Windows+CygwinでSquidをコンパイルしてWindowsサービス化
+description: "以前の記事でWindows上にてSquidを動かした際、Windowsサービス化ができなくて、ドス窓を閉じたりサインアウトしたりするとSquidのプロセスが停止してしまう問題がありました。ようやっとこれが解決したのでまとめます。"
 author: seroto_nin
 type: post
 date: 2017-10-22T07:04:22+00:00

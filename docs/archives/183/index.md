@@ -1,5 +1,6 @@
 ---
 title: LPIC Level2合格
+description: "やーっとLPIC Level2とれました。長かったよ。とりあえずこれで｢ある程度Linuxはできますんでフヒヒ｣みたいなことは言ってもいいよね。正答率65%以上、200-800点中500点で合格です。以下受験体験記です。"
 author: seroto_nin
 type: post
 date: 2017-07-30T12:08:26+00:00
@@ -11,7 +12,7 @@ categories:
 ---
 # {{this.$page.frontmatter.title}}
 
-やーっとLPIC Level2とれました。長かったよ。とりあえずこれで｢ある程度Linuxはできますんでフヒヒ｣みたいなことは言ってもいいよね。正答率65%以上、200-800点中500点で合格です。以下受験体験記です。
+{{this.$page.frontmatter.description}}
   
 <!--more-->
 

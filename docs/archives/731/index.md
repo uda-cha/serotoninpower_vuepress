@@ -1,5 +1,6 @@
 ---
 title: Ansibleのuserモジュールでパスワードをソルト指定なしのpassword_hash()で生成すると毎回changedになる
+description: "掲題の通り。恥ずかしながらソルトという概念を知らずにべき等性の闇に飲まれてはまったのでメモ。"
 author: seroto_nin
 type: post
 date: 2019-05-29T14:39:30+00:00
@@ -11,7 +12,7 @@ categories:
 ---
 # {{this.$page.frontmatter.title}}
 
-掲題の通り。恥ずかしながらソルトという概念を知らずにべき等性の闇に飲まれてはまったのでメモ。
+{{this.$page.frontmatter.description}}
 
 <!--more-->
 

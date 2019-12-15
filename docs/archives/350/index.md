@@ -1,5 +1,6 @@
 ---
 title: vagrantで大量の軽量Linux(Alpine Linux)を一括作成
+description: "検証用に大量の仮想マシンが必要になったので、軽量LinuxであるAlpine Linuxをvagrantで一気に30台作成しました。手順をメモします。"
 author: seroto_nin
 type: post
 date: 2018-01-13T06:35:15+00:00
@@ -13,7 +14,7 @@ categories:
 ---
 # {{this.$page.frontmatter.title}}
 
-検証用に大量の仮想マシンが必要になったので、軽量LinuxであるAlpine Linuxをvagrantで一気に30台作成しました。手順をメモします。
+{{this.$page.frontmatter.description}}
 
 <!--more-->
 

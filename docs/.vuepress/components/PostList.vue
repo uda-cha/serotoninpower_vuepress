@@ -7,6 +7,7 @@
         <li class="category" v-for="category in post.frontmatter.categories">
           <span>{{category}}</span>
         </li>
+      <p>{{post.frontmatter.description}}</p>
       </ul>
       <a v-bind:href="post.path">続きを読む</a>
     </div>

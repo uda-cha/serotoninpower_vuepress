@@ -1,5 +1,6 @@
 ---
 title: ZabbixでSquidを監視する
+description: "Zabbixの監視テンプレートを自作(といいつつネットに転がっているのをカスタマイズするだけ)してみます。まずはSquidから。"
 author: seroto_nin
 type: post
 date: 2019-04-25T14:18:43+00:00
@@ -11,7 +12,7 @@ categories:
 ---
 # {{this.$page.frontmatter.title}}
 
-Zabbixの監視テンプレートを自作(といいつつネットに転がっているのをカスタマイズするだけ)してみます。まずはSquidから。
+{{this.$page.frontmatter.description}}
 
 <!--more-->
 

@@ -1,5 +1,6 @@
 ---
 title: CentOS7でReadyMedia(MiniDLNA)を使ってDLNAミュージックストリーミングサーバを作る
+description: "以前の記事で、mpdを使いミュージックサーバを作りました。これはCentOS7に直結されたスピーカーから音楽を再生するミュージックサーバです。今度はCentOS7から音楽を飛ばし、他のデバイスで音楽を再生できるような環境を作ります。この音楽を飛ばすプロトコルがDLNA。音楽以外に動画や写真なんかも飛ばせます。"
 author: seroto_nin
 type: post
 date: 2018-08-13T10:12:14+00:00

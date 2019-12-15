@@ -1,5 +1,6 @@
 ---
 title: このブログのセキュリティ設定①
+description: "Webサーバレイヤでのセキュリティ対策を一通り終えました。備忘録として残しておきます。稚拙な知識だけどあとで振り返ることができるように。"
 author: seroto_nin
 type: post
 date: 2017-04-09T13:22:45+00:00
@@ -10,7 +11,7 @@ categories:
 ---
 # {{this.$page.frontmatter.title}}
 
-Webサーバレイヤでのセキュリティ対策を一通り終えました。備忘録として残しておきます。稚拙な知識だけどあとで振り返ることができるように。
+{{this.$page.frontmatter.description}}
 
 ## **対象**
 

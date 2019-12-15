@@ -1,5 +1,6 @@
 ---
 title: 'KVMの仮想マシン作成 & インストール自動化(virt-install & Kickstart)'
+description: "この前の記事では、KVMの仮想マシンをvirt-managerからGUIで作成し、virt-managerの仮想シリアルコンソールからポチポチインストールしましたが、毎回GUIでこんなことやってられないので自動化しました。"
 author: seroto_nin
 type: post
 date: 2018-05-06T13:17:46+00:00

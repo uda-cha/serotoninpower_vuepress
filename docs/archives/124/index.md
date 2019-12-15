@@ -1,5 +1,6 @@
 ---
 title: CentOSにおけるソフトウェアRAIDの構築
+description: "今日もLPIC 201の勉強です。病気になりそう。今回はディスク冗長化のRAIDの構築。新しくPC買ったらRAID5でファイルサーバを構築しようと考えているのでいい勉強の機会です。ちなみにソフトウェアRAIDはOSの機能で管理するRAIDで、ハードウェアRAIDはそれ用の機械をコンピュータの中につっこんでやるRAIDです。後者はOSからは/dev/sdbみたいに普通の1ディスクとして見えるそうな。"
 author: seroto_nin
 type: post
 date: 2017-06-05T14:08:36+00:00
@@ -11,7 +12,7 @@ categories:
 ---
 # {{this.$page.frontmatter.title}}
 
-今日もLPIC 201の勉強です。病気になりそう。今回はディスク冗長化のRAIDの構築。新しくPC買ったらRAID5でファイルサーバを構築しようと考えているのでいい勉強の機会です。ちなみにソフトウェアRAIDはOSの機能で管理するRAIDで、ハードウェアRAIDはそれ用の機械をコンピュータの中につっこんでやるRAIDです。後者はOSからは/dev/sdbみたいに普通の1ディスクとして見えるそうな。
+{{this.$page.frontmatter.description}}
 
 <!--more-->
 

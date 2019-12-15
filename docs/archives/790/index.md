@@ -1,5 +1,6 @@
 ---
 title: nginxでX-Forwarded-Forの値に$proxy_add_x_forwarded_forを安易に使わない方が良い
+description: "nginxでX-Forwarded-Forヘッダを付与するのに`$proxy_add_x_forwarded_for`という便利な変数がありますが、迂闊に設定するとちょっと危ないのでメモします。"
 author: seroto_nin
 type: post
 date: 2019-08-17T14:21:01+00:00
@@ -10,7 +11,7 @@ categories:
 ---
 # {{this.$page.frontmatter.title}}
 
-nginxでX-Forwarded-Forヘッダを付与するのに`$proxy_add_x_forwarded_for`という便利な変数がありますが、迂闊に設定するとちょっと危ないのでメモします。
+{{this.$page.frontmatter.description}}
 
 <!--more-->
 

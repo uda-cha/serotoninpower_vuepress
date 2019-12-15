@@ -1,5 +1,6 @@
 ---
 title: ブログをちょこっとおしゃれにしました
+description: "GWからずーっとhtmlとcssについて勉強していました。フルスタックエンジニアになるために。ざっくりいうと、webシステムは大きく三つの技術領域に分けられます。"
 author: seroto_nin
 type: post
 date: 2017-05-16T14:06:21+00:00
@@ -10,7 +11,7 @@ categories:
 ---
 # {{this.$page.frontmatter.title}}
 
-GWからずーっとhtmlとcssについて勉強していました。フルスタックエンジニアになるために。ざっくりいうと、webシステムは大きく三つの技術領域に分けられます。
+{{this.$page.frontmatter.description}}
 
 <!--more-->
 

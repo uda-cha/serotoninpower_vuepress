@@ -1,5 +1,6 @@
 ---
 title: CentOS 7.6でWordPressのPHPを5.4から7.3にアップデートする
+description: "やろうやろうと思って後回しにしてきたPHPのアップデートをついにやりました。手順をメモに残しておきます。ついでにPHP7台になってどれだけ速度が上がるかどうかも。"
 author: seroto_nin
 type: post
 date: 2019-05-04T18:06:29+00:00
@@ -12,7 +13,7 @@ categories:
 ---
 # {{this.$page.frontmatter.title}}
 
-やろうやろうと思って後回しにしてきたPHPのアップデートをついにやりました。手順をメモに残しておきます。ついでにPHP7台になってどれだけ速度が上がるかどうかも。
+{{this.$page.frontmatter.description}}
 
 <!--more-->
 

@@ -1,5 +1,6 @@
 ---
 title: このブログのセキュリティ設定②
+description: "ログイン画面へのブルートフォース攻撃を避けるために、WordPressの画像認証プラグイン｢SI CAPTCHA Anti-Spam｣を導入したので、手順を書いておきます。絶対忘れるから。"
 author: seroto_nin
 type: post
 date: 2017-04-15T13:28:30+00:00
@@ -10,7 +11,7 @@ categories:
 ---
 # {{this.$page.frontmatter.title}}
 
-ログイン画面へのブルートフォース攻撃を避けるために、WordPressの画像認証プラグイン｢SI CAPTCHA Anti-Spam｣を導入したので、手順を書いておきます。絶対忘れるから。
+{{this.$page.frontmatter.description}}
 
 ## **対象**
 

@@ -1,5 +1,6 @@
 ---
 title: CetnOS7でiSCSIターゲットを構築
+description: "以前、自宅にESXiを構築しました。ESXi上の仮想マシンのディスクイメージは、業務ではESXiローカルに配置することはほぼなく、別ホストのSANストレージ上に配置することがほとんどです。ESXiのストレージ接続の勉強のために、自宅CentOS機でiSCSIターゲットを構築したため、その手順をメモっておきます。勉強のための勉強です。長くなったのでESXiからのマウントは別記事で。"
 author: seroto_nin
 type: post
 date: 2018-11-17T05:24:58+00:00
@@ -11,7 +12,7 @@ categories:
 ---
 # {{this.$page.frontmatter.title}}
 
-以前、自宅にESXiを構築しました。ESXi上の仮想マシンのディスクイメージは、業務ではESXiローカルに配置することはほぼなく、別ホストのSANストレージ上に配置することがほとんどです。ESXiのストレージ接続の勉強のために、自宅CentOS機でiSCSIターゲットを構築したため、その手順をメモっておきます。勉強のための勉強です。長くなったのでESXiからのマウントは別記事で。
+{{this.$page.frontmatter.description}}
 
 <!--more-->
 

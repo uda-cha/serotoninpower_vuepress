@@ -1,5 +1,6 @@
 ---
 title: capistrano3をdockerで動かし単純な複数サーバへのコマンド発行ツールとして使う
+description: "デプロイツールとして有名なcapistrano3ですが、デフォルトで多機能すぎて牛刀で鶏を割いている感があります(使用者に牛刀を扱う能力がない説もあります)。なので、capistrano3の勉強を兼ねて、これを高度なデプロイツールとしてではなく、複数サーバに対する単純なコマンド実行ツールとしてなるべくシンプルに使ってみます。with docker。"
 author: seroto_nin
 type: post
 date: 2019-08-27T15:52:25+00:00
@@ -11,7 +12,7 @@ categories:
 ---
 # {{this.$page.frontmatter.title}}
 
-デプロイツールとして有名なcapistrano3ですが、デフォルトで多機能すぎて牛刀で鶏を割いている感があります(使用者に牛刀を扱う能力がない説もあります)。なので、capistrano3の勉強を兼ねて、これを高度なデプロイツールとしてではなく、複数サーバに対する単純なコマンド実行ツールとしてなるべくシンプルに使ってみます。with docker。
+{{this.$page.frontmatter.description}}
 
 <!--more-->
 

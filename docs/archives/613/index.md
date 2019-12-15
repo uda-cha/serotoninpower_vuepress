@@ -1,5 +1,6 @@
 ---
 title: '[Ruby]ネストされたハッシュのeachメソッドと動的型変換'
+description: "最近Ruby on Railsを勉強しています。何もわからん。その一環で掲題の件で3日くらい詰まったことがあったのでメモしておきます。"
 author: seroto_nin
 type: post
 date: 2019-04-21T12:06:37+00:00
@@ -10,7 +11,7 @@ categories:
 ---
 # {{this.$page.frontmatter.title}}
 
-最近Ruby on Railsを勉強しています。何もわからん。その一環で掲題の件で3日くらい詰まったことがあったのでメモしておきます。
+{{this.$page.frontmatter.description}}
 
 <!--more-->
 

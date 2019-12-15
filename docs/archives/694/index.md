@@ -1,5 +1,6 @@
 ---
 title: DockerでRuby on Rails + MySQLの開発環境構築
+description: "これまでWSL上でrbenv経由でRuby on Railsの環境を構築して勉強していましたが、ちょっと他のマシンでRails動かしたい、となったとき、いちいちそのマシンでrbenvからRailsをインストールするまでをやるのが面倒だったので、開発環境をDockerで構築することにしました。これで他のマシンで開発がしたくなっても、Dockerとdocker-composeさえ入っていれば、3つコマンド打つだけで開発環境が整えられるようになりました。"
 author: seroto_nin
 type: post
 date: 2019-05-04T15:32:33+00:00
@@ -12,7 +13,7 @@ categories:
 ---
 # {{this.$page.frontmatter.title}}
 
-これまでWSL上でrbenv経由でRuby on Railsの環境を構築して勉強していましたが、ちょっと他のマシンでRails動かしたい、となったとき、いちいちそのマシンでrbenvからRailsをインストールするまでをやるのが面倒だったので、開発環境をDockerで構築することにしました。これで他のマシンで開発がしたくなっても、Dockerとdocker-composeさえ入っていれば、3つコマンド打つだけで開発環境が整えられるようになりました。
+{{this.$page.frontmatter.description}}
 
 <!--more もっと読む-->
 

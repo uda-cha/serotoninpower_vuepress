@@ -1,5 +1,6 @@
 ---
 title: ZabbixでMySQLを監視する
+description: "Zabbixで個別アプリケーションを監視しよう第2弾。MySQLはZabbixにビルトインの監視テンプレートがありますが、使うためにひと手間いるのでメモしておきます。"
 author: seroto_nin
 type: post
 date: 2019-04-26T14:51:31+00:00
@@ -11,7 +12,7 @@ categories:
 ---
 # {{this.$page.frontmatter.title}}
 
-Zabbixで個別アプリケーションを監視しよう第2弾。MySQLはZabbixにビルトインの監視テンプレートがありますが、使うためにひと手間いるのでメモしておきます。
+{{this.$page.frontmatter.description}}
 
 <!--more-->
 

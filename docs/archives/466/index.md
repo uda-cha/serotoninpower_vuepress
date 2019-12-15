@@ -1,5 +1,6 @@
 ---
 title: mini-ITXで自宅VMware ESXi 6.5構築
+description: "ブログほったらかしてました。あまりトピックがなかった。今回は半年くらい前からずっとやりたかった自宅ESXiの構築です。コンパクトなPCにしようと思って、初めてmini-ITXのケース、マザボで組んでみました。100円ライター×3つぶんくらいの高さでいいですね。でもやっぱ狭くて作業しづらい。次はミニタワー × micro-ATXにします。"
 author: seroto_nin
 type: post
 date: 2018-11-04T07:38:40+00:00
@@ -11,7 +12,7 @@ categories:
 ---
 # {{this.$page.frontmatter.title}}
 
-ブログほったらかしてました。あまりトピックがなかった。今回は半年くらい前からずっとやりたかった自宅ESXiの構築です。コンパクトなPCにしようと思って、初めてmini-ITXのケース、マザボで組んでみました。100円ライター×3つぶんくらいの高さでいいですね。でもやっぱ狭くて作業しづらい。次はミニタワー × micro-ATXにします。
+{{this.$page.frontmatter.description}}
 
 ![DSC_0143.jpg](./DSC_0143.jpg)
 

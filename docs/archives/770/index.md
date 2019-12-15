@@ -12,6 +12,8 @@ categories:
   - WordPress
 
 ---
+# {{this.$page.frontmatter.title}}
+
 最近はずっとこれやってました。dockerをきちんと勉強したかったのと、度重なるApacheやWordPressの脆弱性対応のバージョンアップ作業にうんざりしていたため、Apacheをやめてnginxを使おう&ぶっ壊しやすいdockerにしようということで。環境を選ばず構築できるよう、https対応もdocker-composeでやります。
 
 <!--more-->

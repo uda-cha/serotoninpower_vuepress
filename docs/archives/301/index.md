@@ -9,6 +9,8 @@ categories:
   - Windows
 
 ---
+# {{this.$page.frontmatter.title}}
+
 自宅でちょっと凝ったことや大量のデータ処理をしたいときはLinux使えばらくちんなんですが、仕事で使う端末はWindowsなのでこちらも勉強しとかないとなぁと思ってちょっとずつやってます。今回はPowerShellでファイル名やフォルダ名に含まれる憎き空白文字を一括で全部アンダーバーに置換します。<!--more-->
 
 ## space\_to\_underbar.ps1

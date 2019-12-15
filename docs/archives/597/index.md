@@ -9,6 +9,8 @@ categories:
   - Zabbix
 
 ---
+# {{this.$page.frontmatter.title}}
+
 Zabbixの監視テンプレートを自作(といいつつネットに転がっているのをカスタマイズするだけ)してみます。まずはSquidから。
 
 <!--more-->

@@ -9,6 +9,8 @@ categories:
   - Linux
 
 ---
+# {{this.$page.frontmatter.title}}
+
 掲題の通り。恥ずかしながらソルトという概念を知らずにべき等性の闇に飲まれてはまったのでメモ。
 
 <!--more-->

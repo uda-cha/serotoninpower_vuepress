@@ -9,6 +9,8 @@ categories:
   - Linux
 
 ---
+# {{this.$page.frontmatter.title}}
+
 ぼーっとjournalctlでログを眺めていたらこんなことになっていた。
 
 <!--more-->

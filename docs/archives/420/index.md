@@ -10,6 +10,8 @@ categories:
   - Linux
 
 ---
+# {{this.$page.frontmatter.title}}
+
 [この前の記事][1]では、KVMの仮想マシンをvirt-managerからGUIで作成し、virt-managerの仮想シリアルコンソールからポチポチインストールしましたが、毎回GUIでこんなことやってられないので自動化しました。
 
 <!--more-->

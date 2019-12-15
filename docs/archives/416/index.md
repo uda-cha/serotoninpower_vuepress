@@ -8,6 +8,8 @@ categories:
   - PowerShell
 
 ---
+# {{this.$page.frontmatter.title}}
+
 仕事でやったことのメモ。XMLファイルで記述された文書をPowerhsellでパースし、必要な情報を取り出す方法です。
 
 <!--more-->

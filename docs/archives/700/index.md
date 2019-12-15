@@ -10,6 +10,8 @@ categories:
   - WordPress
 
 ---
+# {{this.$page.frontmatter.title}}
+
 やろうやろうと思って後回しにしてきたPHPのアップデートをついにやりました。手順をメモに残しておきます。ついでにPHP7台になってどれだけ速度が上がるかどうかも。
 
 <!--more-->

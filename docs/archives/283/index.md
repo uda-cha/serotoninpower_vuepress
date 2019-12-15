@@ -10,6 +10,8 @@ categories:
   - samba
 
 ---
+# {{this.$page.frontmatter.title}}
+
 Linux機をファイルサーバにしてそこに音楽をボンボン放り込んでおいて、それをスマホから操作してスピーカーから流せたらいいなということで作りました。mpdサーバーです。
 
 <!--more-->

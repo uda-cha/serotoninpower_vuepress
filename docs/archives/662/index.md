@@ -9,6 +9,8 @@ categories:
   - Zabbix
 
 ---
+# {{this.$page.frontmatter.title}}
+
 Zabbixで個別アプリケーションを監視しよう第3弾。ApacheはZabbixのビルトインのテンプレートに入ってますが、なんとシンプルチェックでHTTP、HTTPSそれぞれのサービスが稼働しているかどうかしか監視してくれない。なのでより細かく監視ができるテンプレートを導入します。んで導入にあたってHSTSなApacheを監視できなかったのでそれにも対応しました。
 
 <!--more-->

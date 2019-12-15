@@ -8,6 +8,7 @@ categories:
   - 自作PC
 
 ---
+# {{this.$page.frontmatter.title}}
 
 あ
 

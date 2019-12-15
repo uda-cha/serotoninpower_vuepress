@@ -10,6 +10,8 @@ categories:
   - Ruby
 
 ---
+# {{this.$page.frontmatter.title}}
+
 これまでWSL上でrbenv経由でRuby on Railsの環境を構築して勉強していましたが、ちょっと他のマシンでRails動かしたい、となったとき、いちいちそのマシンでrbenvからRailsをインストールするまでをやるのが面倒だったので、開発環境をDockerで構築することにしました。これで他のマシンで開発がしたくなっても、Dockerとdocker-composeさえ入っていれば、3つコマンド打つだけで開発環境が整えられるようになりました。
 
 <!--more もっと読む-->

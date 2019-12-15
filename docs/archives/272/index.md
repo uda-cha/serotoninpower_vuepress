@@ -10,6 +10,8 @@ categories:
   - ストレージ
 
 ---
+# {{this.$page.frontmatter.title}}
+
 自宅のファイルサーバのHDDを(一部)冗長化しました。感情がなさすぎて前置きがこれ以上書けない。
   
 <!--more-->

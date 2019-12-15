@@ -9,6 +9,8 @@ categories:
   - Windows
 
 ---
+# {{this.$page.frontmatter.title}}
+
 ラズパイでSquid立ててからもプロキシサーバSquidについてはいろいろ勉強してます。きょうはWindows版のSquidについて。Windows版はドキュメント少ないわ古いわで動作検証が大変でした。
 
 <!--more-->

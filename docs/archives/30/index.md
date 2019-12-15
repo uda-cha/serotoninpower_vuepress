@@ -8,6 +8,8 @@ categories:
   - WordPress
 
 ---
+# {{this.$page.frontmatter.title}}
+
 ログイン画面へのブルートフォース攻撃を避けるために、WordPressの画像認証プラグイン｢SI CAPTCHA Anti-Spam｣を導入したので、手順を書いておきます。絶対忘れるから。
 
 ## **対象**

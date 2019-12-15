@@ -8,6 +8,8 @@ categories:
   - マストドン
 
 ---
+# {{this.$page.frontmatter.title}}
+
 docker環境で動かしているマストドンを1.2.2から1.3.2へアップデートしたので手順をメモしておきます。基本的には以下の公式ドキュメントの通り。
 
 <https://github.com/tootsuite/documentation/blob/master/Running-Mastodon/Docker-Guide.md>

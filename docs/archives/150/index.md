@@ -9,6 +9,8 @@ categories:
   - Linux
 
 ---
+# {{this.$page.frontmatter.title}}
+
 私が物理PCにlinuxをインストールする際は、いつもUSBメモリでブートメディアを作ってます。Windowsでisoイメージを落としてきて、それをUSBメモリにUNetbootinを使って燒き、対象のPCの起動デバイス読み込み順をBIOSから変更し、USBぶっさして起動するといった流れです。なんのことはないんですけど、今回のあたらしいぱそこそにCentOS7をインストールする際にうまくいかんかった。
   
 <!--more-->

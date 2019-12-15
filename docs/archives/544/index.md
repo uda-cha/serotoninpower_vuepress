@@ -11,6 +11,7 @@ categories:
   - セキュリティ
 
 ---
+# {{this.$page.frontmatter.title}}
 
 このブログサーバのSSL/TLS証明書は、Certbotというツールを使い、`Let’s Encrypt`というCAから自動で発行/更新してもらっていました。2019年1月18日に`Let’s Encrypt`からこんなメールがきたので対応しました。
 

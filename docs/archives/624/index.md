@@ -8,6 +8,8 @@ categories:
   - Apache
 
 ---
+# {{this.$page.frontmatter.title}}
+
 今時点でのApacheの設定を総まとめします。私のApcheの設定ファイルは、これまでいろいろ手を加えて育ってきているので、それを棚卸しようかと思い記述します。
 
 <!--more-->

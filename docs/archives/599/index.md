@@ -11,6 +11,8 @@ categories:
   - WordPress
 
 ---
+# {{this.$page.frontmatter.title}}
+
 20190306 リストア手順について追記
 
 SSIA。`/etc/httpd/*`と`/var/www/html/*`のファイルを丸ごとtar&gzで固めてバックアップするのと、MariaDBのデータをmysqldumpを使って全テーブルオンラインバックアップするのと、6カ月たったバックアップファイルを検索して削除するスクリプトです。これをcrontabに登録して月一くらいで実行するようにします。

@@ -10,6 +10,8 @@ categories:
   - samba
 
 ---
+# {{this.$page.frontmatter.title}}
+
 <span style="color: #ff0000;">20180729 Sambaのセキュア化設定(SMBv1無効化、ディジタル署名有効化)とプリンタ関連のログ抑制設定を追加</span>
 
 LPIC 202の勉強がてらSambaサーバ構築してみました。Sambaとは簡単に言うとWindowsからアクセスできるファイルサーバです。Active Directoryのドメインコントローラにもなれたりするらしいですが難しそうなのでいったん置いておきます。

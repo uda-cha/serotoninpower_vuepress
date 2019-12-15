@@ -8,6 +8,8 @@ categories:
   - HTML/CSS
 
 ---
+# {{this.$page.frontmatter.title}}
+
 GWからずーっとhtmlとcssについて勉強していました。フルスタックエンジニアになるために。ざっくりいうと、webシステムは大きく三つの技術領域に分けられます。
 
 <!--more-->

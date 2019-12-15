@@ -9,6 +9,8 @@ categories:
   - Zabbix
 
 ---
+# {{this.$page.frontmatter.title}}
+
 Zabbixで個別アプリケーションを監視しよう第2弾。MySQLはZabbixにビルトインの監視テンプレートがありますが、使うためにひと手間いるのでメモしておきます。
 
 <!--more-->

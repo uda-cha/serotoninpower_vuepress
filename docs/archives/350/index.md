@@ -11,6 +11,8 @@ categories:
   - VirtualBox
 
 ---
+# {{this.$page.frontmatter.title}}
+
 検証用に大量の仮想マシンが必要になったので、軽量LinuxであるAlpine Linuxをvagrantで一気に30台作成しました。手順をメモします。
 
 <!--more-->

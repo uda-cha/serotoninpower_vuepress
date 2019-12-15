@@ -8,6 +8,8 @@ categories:
   - Ruby
 
 ---
+# {{this.$page.frontmatter.title}}
+
 最近Ruby on Railsを勉強しています。何もわからん。その一環で掲題の件で3日くらい詰まったことがあったのでメモしておきます。
 
 <!--more-->

@@ -13,6 +13,8 @@ categories:
   - Zabbix
 
 ---
+# {{this.$page.frontmatter.title}}
+
 OSSの監視サーバソフトウェアとして有名なZabbixは、通常Maria DBなどのデータベースサーバ、httpdなどのWebサーバ、Zabbixアプリケーションサーバを立て、phpをインストールして、などと複数のコンポーネントを組み合わせて構築する必要がありますが、公式がZabbix applianceなる全部入りのOSイメージを展開しています。さらに、OSイメージだけではなくdockerイメージとしても配布されているため、今回はdockerを作ってZabbixを構築し、エージェント監視を行うまでをAnsibleでやりました。ZabbixサーバのコンテナをインストールしたdockerホストにインストールしたエージェントとZabbixサーバの疎通に若干手間取ったので、それもメモします。
 
 <!--more-->

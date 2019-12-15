@@ -8,6 +8,8 @@ categories:
   - PowerShell
 
 ---
+# {{this.$page.frontmatter.title}}
+
 複数のflacファイルにアートワークを埋め込む作業をmetaflacとPowershellでやってたんですが、Poweshellのスクリプト文中でパスを変数に格納したプログラムを実行しようとした際にはまりました。<!--more-->
 
 ## 結論

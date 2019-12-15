@@ -10,6 +10,8 @@ categories:
   - 近況
 
 ---
+# {{this.$page.frontmatter.title}}
+
 もう残業したくない。忙しすぎてブログ書いてなかったです。いろいろやってたことのまとめ。
 
 <!--more-->

@@ -8,6 +8,8 @@ categories:
   - nginx
 
 ---
+# {{this.$page.frontmatter.title}}
+
 nginxでX-Forwarded-Forヘッダを付与するのに`$proxy_add_x_forwarded_for`という便利な変数がありますが、迂闊に設定するとちょっと危ないのでメモします。
 
 <!--more-->

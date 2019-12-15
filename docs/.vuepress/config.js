@@ -12,7 +12,13 @@ module.exports = {
   ],
   themeConfig: {
     sidebar: 'auto',
-    sidebarDepth: 6
+    sidebarDepth: 6,
+    smoothScroll: true,
+    nav: [
+      { text: 'Home', link: '/' },
+      { text: 'Archives', link: '/archives/' },
+      { text: 'GitHub', link: 'https://github.com/uda-cha' }
+    ]
   },
   markdown: {
     lineNumbers: true

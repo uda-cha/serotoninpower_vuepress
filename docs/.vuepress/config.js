@@ -1,7 +1,7 @@
 // .vuepress/config.js
 module.exports = {
   title: 'せろとにんぱわー.',
-  description: 'IT系のブログ。インフラやミドルウェア周りの話が多め。',
+  description: 'インフラやミドルウェア周りの話が多め。',
   locales: {
     '/': {
       lang: 'ja'
@@ -14,6 +14,7 @@ module.exports = {
     sidebar: 'auto',
     sidebarDepth: 6,
     smoothScroll: true,
+    activeHeaderLinks: true,
     nav: [
       { text: 'Home', link: '/' },
       { text: 'Archives', link: '/archives/' },

@@ -3,5 +3,9 @@ home: true
 heroImage: hero.jpg
 ---
 
-<PostList />
+## 最近の投稿
+
+<PostList v-bind:limit="5"/>
+
+[more Archivevs...](/archives/)
 

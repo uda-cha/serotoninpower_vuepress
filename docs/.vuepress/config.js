@@ -13,7 +13,9 @@ module.exports = {
     ['meta', { name: 'og:type', content: 'website' }],
     ['meta', { name: 'og:title', content: 'せろとにんぱわー' }],
     ['meta', { name: 'og:description', content: 'インフラやミドルウェア周りの話が多め。' }],
-    ['meta', { name: 'og:image', content: '/favicon.ico' }]
+    ['meta', { name: 'og:image', content: '/og.jpg' }],
+    ['meta', { name: 'twitter:card', content: 'Summary Card' }],
+    ['meta', { name: 'twitter:site', content: 'https://www.serotoninpower.club/' }]
   ],
   themeConfig: {
     sidebar: 'auto',

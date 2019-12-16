@@ -20,7 +20,7 @@ export default {
     posts() {
       let res = this.$site.pages
         // archivesディレクトリ以下を投稿記事一覧表示の対象とする
-        .filter(post => post.path.startsWith('/archives/'))
+        .filter(post => post.path.match(/^\/archives\/\d/))
         // dateに設定した日付の降順にソートする
         .sort((a, b) => new Date(b.frontmatter.date) - new Date(a.frontmatter.date));
       if ( this.limit != undefined ) {

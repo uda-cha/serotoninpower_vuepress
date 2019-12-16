@@ -5,7 +5,6 @@ heroImage: hero.jpg
 
 ## 最近の投稿
 
-<PostList v-bind:limit="5"/>
+<PostList v-bind:limit="3"/>
 
-[more Archivevs...](/archives/)
-
+<MoreTo v-bind:path=String(/archives/)>More archives...</MoreTo>

@@ -3,6 +3,7 @@
   <div>
     <div v-for="post in posts">
       <h2><a v-bind:href="post.path">{{post.title}}</a></h2>
+      <span class="date">{{ post.frontmatter.date | moment }}</span>
       <ul class="categories">
         <li class="category" v-for="category in post.frontmatter.categories">
           <span>{{category}}</span>
@@ -14,6 +15,7 @@
   </div>
 </template>
 <script>
+import moment from 'moment';
 export default {
   props: { limit: Number },
   computed: {
@@ -28,11 +30,20 @@ export default {
       };
       return res;
     }
+  },
+  filters: {
+    moment: function (date) {
+        return moment(date).format('YYYY/MM/DD');
+    }
   }
 }
 </script>
 <style lang="stylus" scoped>
+/date {
+  display: inline-block;
+}
 .categories {
+  display: inline-block;
   padding-inline-start: 0;
 
   .category {

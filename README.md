@@ -1,3 +1,7 @@
+# serotoninpower_vuepress
+
+自分のブログサイトのコードベース
+
 ## 開発環境初期化
 
 https://vuepress.vuejs.org/guide/getting-started.html#inside-an-existing-project
@@ -30,3 +34,29 @@ $ docker-compose run --rm --service-ports node npm run dev
 ```shell
 $ docker-compose run --rm node npm run build
 ```
+
+## firebaseへのデプロイ
+
+- デプロイ前にビルドをやる
+- firebase token は何らかの方法で取得しておく
+
+```json:firebase.json
+{
+ "hosting": {
+   "public": "./docs/.vuepress/dist",
+   "ignore": []
+ }
+}
+
+```json:.firebaserc
+{
+ "projects": {
+   "default": "<YOUR_FIREBASE_ID>"
+ }
+}
+
+```shell
+$ docker-compose run --rm node npm install -D firebase-tools
+$ docker-compose run --rm node /app/node_modules/.bin/firebase deploy --token <token>
+```
+

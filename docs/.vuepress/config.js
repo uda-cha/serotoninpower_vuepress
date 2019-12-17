@@ -1,4 +1,22 @@
 // .vuepress/config.js
+const feed_options = {
+  canonical_base: 'https://www.serotoninpower.club/',
+  posts_directories: '/archives/',
+  feeds: {
+    atom1: { enable: false },
+    json1: { enable: false },
+    rss2: {
+      enable: true,
+      file_name: 'rss.xml',
+      head_link: {
+        enable: true,
+        type: 'application/rss+xml',
+        title : '%%site_title%% RSS Feed',
+      }
+    }
+  }
+};
+
 module.exports = {
   title: 'せろとにんぱわー.',
   description: 'インフラやミドルウェア周りの話が多め。',
@@ -34,6 +52,9 @@ module.exports = {
   plugins: {
     'sitemap': {
       hostname: 'https://www.serotoninpower.club/'
+    },
+    'feed': {
+       feed_options
     }
   }
 }

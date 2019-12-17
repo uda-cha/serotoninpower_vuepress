@@ -174,7 +174,8 @@ cache_store_log none
 
 各種ファイルを以下のディレクトリ構成で置いておきます。
 
-```bash[udacha@srtppc02 ansible]$ pwd
+```bash
+[udacha@srtppc02 ansible]$ pwd
 /etc/ansible
 [udacha@srtppc02 ansible]$ tree --charset=hoge
 .

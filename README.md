@@ -40,20 +40,26 @@ $ docker-compose run --rm node npm run build
 - デプロイ前にビルドをやる
 - firebase token は何らかの方法で取得しておく
 
-```json:firebase.json
+`firebase.json`
+
+```json
 {
  "hosting": {
    "public": "./docs/.vuepress/dist",
    "ignore": []
  }
 }
+```
 
-```json:.firebaserc
+`.firebaserc`
+
+```json
 {
  "projects": {
    "default": "<YOUR_FIREBASE_ID>"
  }
 }
+```
 
 ```shell
 $ docker-compose run --rm node npm install -D firebase-tools

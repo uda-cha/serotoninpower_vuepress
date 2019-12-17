@@ -9,7 +9,8 @@
   "dependencies": {},
   "devDependencies": {
     "moment": "^2.24.0",
-    "vuepress": "^1.2.0"
+    "vuepress": "^1.2.0",
+    "vuepress-plugin-sitemap": "^2.3.1"
   },
   "scripts": {
     "dev": "vuepress dev docs",

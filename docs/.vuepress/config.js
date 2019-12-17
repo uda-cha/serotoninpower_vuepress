@@ -30,5 +30,10 @@ module.exports = {
   },
   markdown: {
     lineNumbers: true
+  },
+  plugins: {
+    'sitemap': {
+      hostname: 'https://www.serotoninpower.club/'
+    }
   }
 }

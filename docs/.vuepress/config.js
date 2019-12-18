@@ -38,6 +38,7 @@ module.exports = {
     'feed': {
        canonical_base: 'https://www.serotoninpower.club/',
        posts_directories: ['/archives/'],
+       sort: entries  => entries.sort((a, b) => b.frontmatter.date - a.frontmatter.date)
     }
   }
 }

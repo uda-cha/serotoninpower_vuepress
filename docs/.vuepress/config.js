@@ -25,7 +25,8 @@ module.exports = {
     nav: [
       { text: 'Home', link: '/' },
       { text: 'Archives', link: '/archives/' },
-      { text: 'GitHub', link: 'https://github.com/uda-cha' }
+      { text: 'GitHub', link: 'https://github.com/uda-cha' },
+      { text: 'Feeds', link: '/feeds/' }
     ]
   },
   markdown: {

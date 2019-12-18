@@ -1,7 +1,8 @@
 ---
 title: Archives
-lang: ja
 sidebar: false
+feed:
+  enable: false
 ---
 
 # Archives

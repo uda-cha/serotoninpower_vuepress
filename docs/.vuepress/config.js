@@ -17,6 +17,9 @@ module.exports = {
     ['meta', { name: 'twitter:card', content: 'Summary Card' }],
     ['meta', { name: 'twitter:site', content: 'https://www.serotoninpower.club/' }]
   ],
+  globalUIComponents: [
+    'MyFooter',
+  ],
   themeConfig: {
     sidebar: 'auto',
     sidebarDepth: 6,

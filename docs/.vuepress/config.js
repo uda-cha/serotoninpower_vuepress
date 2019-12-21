@@ -36,6 +36,7 @@ module.exports = {
     lineNumbers: true
   },
   plugins: {
+    '@vuepress/back-to-top': {},
     'sitemap': {
       hostname: 'https://www.serotoninpower.club/'
     },

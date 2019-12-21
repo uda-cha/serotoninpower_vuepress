@@ -8,6 +8,7 @@
   },
   "dependencies": {},
   "devDependencies": {
+    "@vuepress/plugin-back-to-top": "^1.2.0",
     "firebase-tools": "^7.10.0",
     "moment": "^2.24.0",
     "vuepress": "^1.2.0",

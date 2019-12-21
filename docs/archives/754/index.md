@@ -12,6 +12,8 @@ categories:
 ---
 # {{this.$page.frontmatter.title}}
 
+<CategoriesAndDate/>
+
 {{this.$page.frontmatter.description}}
 
 [CentOS7でReadyMedia(MiniDLNA)を使ってDLNAミュージックストリーミングサーバを作る](https://www.serotoninpower.club/archives/440)

@@ -11,6 +11,8 @@ categories:
 ---
 # {{this.$page.frontmatter.title}}
 
+<CategoriesAndDate/>
+
 {{this.$page.frontmatter.description}}
 
 あまり人を増やすと何が起こるかわからない(サーバ運用的に)なので、GW一杯くらいまで登録を受け付け、その後は新規登録を締め切ろうと思います。

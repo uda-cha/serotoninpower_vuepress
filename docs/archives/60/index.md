@@ -11,6 +11,8 @@ categories:
 ---
 # {{this.$page.frontmatter.title}}
 
+<CategoriesAndDate/>
+
 {{this.$page.frontmatter.description}}
 
 基本的には以下の公式ドキュメントの通り。

@@ -12,6 +12,8 @@ categories:
 ---
 # {{this.$page.frontmatter.title}}
 
+<CategoriesAndDate/>
+
 <https://www.ssllabs.com/ssltest/>というWebサーバのSSL/TLS強度をテストしてくれるサイトがあります。このブログサーバ構築時に、ネットの記事のコンフィグコピペでA+をとれるようにしたっきり放置していて、いろいろ設定も変えたし時間も流れた現在、再度ここで最高ランクA+を取れるようにしようというのが今回の記事の趣旨。
 
 <!--more-->

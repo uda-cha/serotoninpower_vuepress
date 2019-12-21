@@ -11,6 +11,8 @@ categories:
 ---
 # {{this.$page.frontmatter.title}}
 
+<CategoriesAndDate/>
+
 {{this.$page.frontmatter.description}}
 
 ![IMG_20170624_110749-225x300.jpg](./IMG_20170624_110749-225x300.jpg)

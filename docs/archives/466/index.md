@@ -12,6 +12,8 @@ categories:
 ---
 # {{this.$page.frontmatter.title}}
 
+<CategoriesAndDate/>
+
 {{this.$page.frontmatter.description}}
 
 ![DSC_0143.jpg](./DSC_0143.jpg)

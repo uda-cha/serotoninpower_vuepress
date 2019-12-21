@@ -14,6 +14,8 @@ categories:
 ---
 # {{this.$page.frontmatter.title}}
 
+<CategoriesAndDate/>
+
 [前の記事][1]ではSquid単体をWindows上で起動する手順について書きました。今回は同様にSquidをWindowsで起動させ、フォワードプロキシとリバースプロキシを同時に動かす方法についてメモします。リバプロもプロセス分離もこれまたドキュメント少なくて大変でした。リバプロのコンフィグなんてほぼフルスクラッチだよ。
 
 <!--more-->

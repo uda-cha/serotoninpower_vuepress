@@ -13,6 +13,8 @@ categories:
 ---
 # {{this.$page.frontmatter.title}}
 
+<CategoriesAndDate/>
+
 <span style="color: #ff0000;">20180415 ｢SELinuxのポリシー作成(geoclue_t→unconfined_service_tへのアクセス制御緩和)｣と｢カラープロファイルを作成するには認証が必要です｣の解消を追記しました。</span>
 
 {{this.$page.frontmatter.description}}

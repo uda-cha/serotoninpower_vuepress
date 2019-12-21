@@ -5,10 +5,9 @@
 </div>
 </template>
 <style lang="stylus" scoped>
-.footer {
-  border-top: 1px solid #eaecef;
-  margin: auto;
-  padding: .8rem 1.6rem;
-  text-align: center;
-}
+.footer
+  border-top: 1px solid #eaecef
+  margin: auto
+  padding: .8rem 1.6rem
+  text-align: center
 </style>

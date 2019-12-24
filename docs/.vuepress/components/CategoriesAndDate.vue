@@ -3,7 +3,7 @@
   <div>
     <span class="date">{{ date | moment }}</span>
     <ul class="categories">
-      <li class="category" v-for="category in categories">
+      <li class="category" v-for="(category, index) in categories" :key="index">
         <span>{{category}}</span>
       </li>
     </ul>
@@ -33,11 +33,11 @@ export default {
     },
   },
   filters: {
-    moment: function (date) {
-        return moment(date).format('YYYY/MM/DD');
-    }
-  }
-}
+    moment: function(date) {
+      return moment(date).format('YYYY/MM/DD');
+    },
+  },
+};
 </script>
 <style lang="stylus" scoped>
 .date

@@ -8,10 +8,10 @@
 </template>
 <script>
 export default {
-  props: { 
-    path: String
-  }
-}
+  props: {
+    path: String,
+  },
+};
 </script>
 <style lang="stylus" scoped>
 .more_to

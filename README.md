@@ -35,6 +35,12 @@ $ docker-compose run --rm --service-ports node npm run dev
 $ docker-compose run --rm node npm run build
 ```
 
+## ESLint
+
+```shell
+$ docker-compose run --rm node npx eslint docs/.vuepress/components/* --no-ignore
+```
+
 ## firebaseへのデプロイ
 
 - デプロイ前にビルドをやる
@@ -63,6 +69,6 @@ $ docker-compose run --rm node npm run build
 
 ```shell
 $ docker-compose run --rm node npm install -D firebase-tools
-$ docker-compose run --rm node /app/node_modules/.bin/firebase deploy --token <token>
+$ docker-compose run --rm node npx firebase deploy --token <token>
 ```
 

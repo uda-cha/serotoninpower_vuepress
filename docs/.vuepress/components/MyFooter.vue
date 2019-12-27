@@ -1,7 +1,8 @@
 // MyFooter.vue
 <template>
 <div class="footer">
-    Copyright 2017-2019 @uda-cha
+  <div>Copyright 2017-2019 @uda-cha</div>
+  <div><a href="/privacy-policy/">privacy policy</a></div>
 </div>
 </template>
 <style lang="stylus" scoped>

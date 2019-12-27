@@ -37,6 +37,9 @@ module.exports = {
   },
   plugins: {
     '@vuepress/back-to-top': {},
+    '@vuepress/google-analytics': {
+      ga: 'UA-155107742-1',
+    },
     'sitemap': {
       hostname: 'https://www.serotoninpower.club/',
       exclude: ['/404.html'],

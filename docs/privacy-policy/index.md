@@ -9,9 +9,9 @@ description: "当サイトのプライバシーポリシーについて"
 
 ## 情報の取得
 
-当サイトは、コンテンツの充実を目的に、(`Google Analytics`)[https://analytics.google.com/analytics/web/provision/?hl=ja#/provision]を利用してアクセス解析を行っています。
+当サイトは、コンテンツの充実を目的に、[`Google Analytics`](https://analytics.google.com/analytics/web/provision/?hl=ja#/provision)を利用してアクセス解析を行っています。
 
-`Google Analytics`は、Cookieを利用してアクセス情報を収集します。この情報に個人を特定するものは一切含まれません。Googleアナリティクスのデータ収集、処理の仕組みについては、(ユーザーがGoogleパートナーのサイトやアプリを使用する際のGoogleによるデータ使用)[https://policies.google.com/technologies/partner-sites?hl=ja]のページをご参照ください。
+`Google Analytics`は、Cookieを利用してアクセス情報を収集します。この情報に個人を特定するものは一切含まれません。Googleアナリティクスのデータ収集、処理の仕組みについては、[ユーザーがGoogleパートナーのサイトやアプリを使用する際のGoogleによるデータ使用](https://policies.google.com/technologies/partner-sites?hl=ja)のページをご参照ください。
 
 情報収集を好まない場合、ユーザ自身でCookieの利用を拒否することができます。ブラウザの設定をご確認ください。
 

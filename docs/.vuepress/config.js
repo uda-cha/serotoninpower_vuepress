@@ -38,7 +38,8 @@ module.exports = {
   plugins: {
     '@vuepress/back-to-top': {},
     'sitemap': {
-      hostname: 'https://www.serotoninpower.club/'
+      hostname: 'https://www.serotoninpower.club/',
+      exclude: ['/404.html'],
     },
     'feed': {
        canonical_base: 'https://www.serotoninpower.club/',

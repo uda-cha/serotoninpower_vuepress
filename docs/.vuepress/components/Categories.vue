@@ -2,8 +2,8 @@
 <template>
   <div>
     <div>
-      <ul class="categories" v-for="(value, key) in categories" :key="key">
-        <li class="category">
+      <ul class="categories">
+        <li class="category" v-for="(value, key) in categories" :key="key">
           <button
             v-on:click="toggleSelectedCategories(key)"
             v-bind:class="{active: isActive(key)}"

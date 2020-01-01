@@ -14,7 +14,7 @@ categories:
 ---
 # {{this.$page.frontmatter.title}}
 
-<CategoriesAndDate/>
+<Date/><ShowCategoriesOfPost/>
 
 {{this.$page.frontmatter.description}}
   

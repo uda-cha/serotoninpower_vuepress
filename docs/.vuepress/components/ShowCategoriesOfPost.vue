@@ -1,29 +1,19 @@
-// CategoriesAndDate.vue
+// ShowCategoriesOfPost.vue
 <template>
-  <div>
-    <span class="date">{{ date | moment }}</span>
+  <span>
     <ul class="categories">
       <li class="category" v-for="(category, index) in categories" :key="index">
         <span>{{category}}</span>
       </li>
     </ul>
-  </div>
+  </span>
 </template>
 <script>
-import moment from 'moment';
 export default {
   props: {
-    input_date: String,
     input_categories: Array,
   },
   computed: {
-    date() {
-      if ( typeof this.input_date !== 'undefined' ) {
-        return this.input_date;
-      } else {
-        return this.$page.frontmatter.date;
-      };
-    },
     categories() {
       if ( typeof this.input_categories !== 'undefined' ) {
         return this.input_categories;
@@ -32,17 +22,9 @@ export default {
       };
     },
   },
-  filters: {
-    moment: function(date) {
-      return moment(date).format('YYYY/MM/DD');
-    },
-  },
 };
 </script>
 <style lang="stylus" scoped>
-.date
-  display: inline-block
-
 .categories
   display: inline-block
   padding-inline-start: 0

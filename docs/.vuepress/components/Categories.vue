@@ -16,8 +16,8 @@
     <div class="post-list">
       <div v-for="(post, index) in selectedPosts" :key="index">
         <h2><a v-bind:href="post.path">{{post.title}}</a></h2>
-        <CategoriesAndDate
-          v-bind:input_date=post.frontmatter.date
+        <Date v-bind:input_date=post.frontmatter.date />
+        <ShowCategoriesOfPost
           v-bind:input_categories=post.frontmatter.categories
         />
         <p>{{post.frontmatter.description}}</p>

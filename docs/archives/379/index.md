@@ -13,7 +13,7 @@ categories:
 ---
 # {{this.$page.frontmatter.title}}
 
-<CategoriesAndDate/>
+<Date/><ShowCategoriesOfPost/>
 
 Vagrant Cloudには[MS公式のWindows10のVagrant Box][1]があります。でもWindows7はないっぽい。と思ったらMS公式のサイトにあった。それを使ってWindows7の仮想マシンをVagrantで構築する手順のメモ。Vagrantfileがちょっとめんどくさい。
 

@@ -13,8 +13,8 @@
         </li>
       </ul>
     </div>
-    <div class="post-list">
-      <div v-for="(post, index) in selectedPosts" :key="index">
+    <transition-group tag="div">
+      <div v-for="(post) in selectedPosts" :key="post">
         <h2><a v-bind:href="post.path">{{post.title}}</a></h2>
         <Date v-bind:input_date=post.frontmatter.date />
         <ShowCategoriesOfPost
@@ -23,7 +23,7 @@
         <p>{{post.frontmatter.description}}</p>
         <a v-bind:href="post.path">続きを読む</a>
       </div>
-    </div>
+    </transition-group>
   </div>
 </template>
 <script>
@@ -102,4 +102,14 @@ export default {
 
       &.active
         background-color: #c2d6ba
+
+.v-enter-active
+  transition: all .5s ease
+
+.v-leave-active
+  transition: all .5s cubic-bezier(1.0, 0.5, 0.8, 1.0)
+
+.v-enter, .v-leave-to
+  transform: translateX(10px)
+  opacity: 0
 </style>

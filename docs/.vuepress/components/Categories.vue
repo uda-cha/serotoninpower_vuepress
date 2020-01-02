@@ -14,7 +14,7 @@
       </ul>
     </div>
     <transition-group tag="div">
-      <div v-for="(post) in selectedPosts" :key="post">
+      <div v-for="(post) in selectedPosts" :key="post.key">
         <h2>
           <router-link v-bind:to="post.path">{{post.title}}</router-link>
         </h2>

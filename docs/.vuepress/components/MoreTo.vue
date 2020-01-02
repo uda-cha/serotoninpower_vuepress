@@ -2,7 +2,9 @@
 <template>
 <div>
   <p class="more_to">
-    <a class="more_to_str" v-bind:href="this.path"><slot></slot></a>
+    <router-link class="more_to_str" v-bind:to="this.path">
+      <slot/>
+    </router-link>
   </p>
 </div>
 </template>

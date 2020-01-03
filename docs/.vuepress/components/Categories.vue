@@ -73,11 +73,11 @@ export default {
       return res;
     },
     isActive: function() {
-      return function(category) {
+      return function(c) {
         if (!this.$route.query.category) {
           return false;
         } else {
-          return this.$route.query.category.includes(category);
+          return this.$route.query.category.includes(c);
         };
       };
     },

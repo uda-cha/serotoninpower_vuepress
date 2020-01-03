@@ -2,7 +2,7 @@
 <template>
 <div class="footer">
   <div>Copyright 2017-2019 @uda-cha</div>
-  <div><a href="/privacy-policy/">privacy policy</a></div>
+  <div><router-link to='/privacy-policy/'>privacy policy</router-link></div>
 </div>
 </template>
 <style lang="stylus" scoped>

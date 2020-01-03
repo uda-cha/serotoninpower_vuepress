@@ -3,7 +3,7 @@ title: '[VuePress]カテゴリ一覧を作る(with クエリストリング)'
 description: "プラグインやvuexを使わずに、このブログにカテゴリ一覧機能を実装しました。その作業メモ。"
 author: seroto_nin
 type: post
-date: 2020-01-03T16:02:08+00:00
+date: 2020-01-03T16:02:08+09:00
 url: /archives/818
 categories:
   - Vue.js

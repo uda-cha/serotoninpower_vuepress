@@ -30,19 +30,15 @@
 </template>
 <script>
 export default {
-  data: function() {
-    return {
-      selectedCategories: [],
-    };
-  },
   methods: {
     toggleSelectedCategories: function(c) {
-      if (this.$data.selectedCategories.includes(c)) {
-        this.$data.selectedCategories =
-            this.$data.selectedCategories.filter((a) => a !== c);
+      const query = Object.assign({}, this.$route.query);
+      if (query.category && query.category.includes(c)) {
+        delete query.category;
       } else {
-        this.$data.selectedCategories.push(c);
+        query.category = c;
       };
+      this.$router.push({query: query});
     },
   },
   computed: {
@@ -64,13 +60,13 @@ export default {
       return res;
     },
     selectedPosts() {
-      if (this.$data.selectedCategories.length == 0) {
+      if (!this.$route.query.category) {
         return;
       };
       const res = this.$site.pages
           .filter((post) => post.path.match(/^\/archives\/\d/))
           .filter((post) => post.frontmatter.categories.some((c) =>
-            this.$data.selectedCategories.includes(c)))
+            this.$route.query.category.includes(c)))
           .sort((a, b) =>
             new Date(b.frontmatter.date) - new Date(a.frontmatter.date));
 
@@ -78,7 +74,11 @@ export default {
     },
     isActive: function() {
       return function(category) {
-        return this.$data.selectedCategories.includes(category);
+        if (!this.$route.query.category) {
+          return false;
+        } else {
+          return this.$route.query.category.includes(category);
+        };
       };
     },
   },

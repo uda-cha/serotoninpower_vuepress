@@ -3,7 +3,12 @@
   <span>
     <ul class="categories">
       <li class="category" v-for="(category, index) in categories" :key="index">
-        <span>{{category}}</span>
+        <span>
+          <router-link
+            v-bind:to="{path: '/categories/', query: { category: category }}">
+              {{category}}
+          </router-link>
+        </span>
       </li>
     </ul>
   </span>
@@ -36,7 +41,13 @@ export default {
     span
       background-color: #c2d6ba
       border-radius: 3px
-      color: #333
       line-height: 1.5
       padding: 5px 10px
+
+      &:hover
+        opacity: 0.8
+
+      a
+        color: #333
+        font-weight: normal
 </style>

@@ -38,7 +38,7 @@ $ docker-compose run --rm node npm run build
 ## ESLint
 
 ```shell
-$ docker-compose run --rm node npx eslint docs/.vuepress/components/* --no-ignore
+$ docker-compose run --rm node npm run lint --silent
 ```
 
 ## firebaseへのデプロイ

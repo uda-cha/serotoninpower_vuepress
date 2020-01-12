@@ -23,7 +23,8 @@
   },
   "scripts": {
     "dev": "vuepress dev docs",
-    "build": "vuepress build docs"
+    "build": "vuepress build docs",
+    "lint": "eslint docs/.vuepress/components/* --no-ignore"
   },
   "keywords": [],
   "author": "",

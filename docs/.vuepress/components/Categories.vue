@@ -40,6 +40,13 @@ export default {
       };
       this.$router.push({query: query});
     },
+    isActive: function(c) {
+      if (!this.$route.query.category) {
+        return false;
+      } else {
+        return this.$route.query.category.includes(c);
+      };
+    },
   },
   computed: {
     categories() {
@@ -71,15 +78,6 @@ export default {
             new Date(b.frontmatter.date) - new Date(a.frontmatter.date));
 
       return res;
-    },
-    isActive: function() {
-      return function(c) {
-        if (!this.$route.query.category) {
-          return false;
-        } else {
-          return this.$route.query.category.includes(c);
-        };
-      };
     },
   },
 };

@@ -1,6 +1,6 @@
 // Comments.vue
 <template>
-  <div>
+  <div class="holds-the-iframe">
     <iframe
       id="comentFrame"
       v-bind:src="get_ifram_src_url"
@@ -29,3 +29,7 @@ export default {
   },
 };
 </script>
+<style lang="stylus" scoped>
+.holds-the-iframe
+  background:url(/loading.gif) center center no-repeat
+</style>

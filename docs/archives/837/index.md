@@ -1,5 +1,5 @@
 ---
-title: 'DLsiteの新作をRSS配信する(Ruby on AWS Labmda + S3 + AWS SAM)'
+title: 'DLsiteの新作をRSS配信する(Ruby on AWS Lambda + S3 + AWS SAM)'
 description: "毎日DLsiteの新作を見ているんですが、そういえばRSS配信してないのかなと思って調べた感じなかったので作りました。AWS LambdaとSAMの勉強も兼ねています。"
 author: seroto_nin
 type: post
@@ -22,10 +22,11 @@ categories:
 
 * AWS SAMでAWS LambdaにRubyコードを依存gem含めてデプロイ
 * AWS CloudWatchから定期的にAWS Lambdaをキック
-* AWS LambdaからDLsiteの新作ページをクローリング&パース
-* パース結果をS3にjson形式でput
-* 前回のパース結果のjsonを取得し、差分を更新
-* RSSフィード形式に起こしてxmlドキュメントとしてパブリックアクセス可なS3にput
+* AWS LambdaからRSSを作成してパブリックアクセス可なS3にput
+  * DLsiteの新作ページをクローリング&パース
+  * パース結果をS3にjson形式でput
+  * 前回のパース結果のjsonを取得し、差分を更新
+  * RSSフィード形式に起こしてxmlドキュメントとしてS3にput
 
 AWS LambdaはAWS SESに来たメールの転送に使っていたりするのですが、手作業で適当に作ってそれっきりで理解が浅かったので、この機会にちょっと勉強しました。
 
@@ -104,7 +105,7 @@ $ tree
 
 * `Gemfile`
 
-```rb{7}
+```ruby{7}
 # frozen_string_literal: true
 
 source "https://rubygems.org"
@@ -134,7 +135,7 @@ $ pipenv run sam local invoke DlsiteRSSFunction
 
 完全にAWS初心者の感想です。そうなのかーという感じですがそうみたいです。更新するたびにaclを設定してやる必要があります。
 
-```rb
+```ruby
 def put_to_s3(key:, body:, content_type: "application/json; charset=utf-8", public: false)
   acl = public ? "public-read" : "private"
 
@@ -152,6 +153,8 @@ end
 
 8割方の時間はこれにもっていかれました。`sam deploy`して権限足りてなくて怒られてまた追加して。。。と無限に繰り返していました。
 
+#### デプロイするユーザに必要な権限
+
 SAMはバックエンドにCloudFormationを使っているそうです。なのでデプロイするAWSユーザにCloudFormationを操作する権限が必要です。
 
 また、Lambdaの関数を作ったり削除したり設定を書き換えたりタグを打ったりするので、Lambdaを操作する権限も必要です。デプロイするユーザとLambdaを実行するユーザを分けていれば、デプロイするユーザにLambdaを実行する権限は不要です。
@@ -166,7 +169,7 @@ Lambda実行ロールも読み書きするので、IAMのroleを操作する権�
 User: arn:aws:iam::xxxxxxxxxxxx:user/xxxxxxxx is not authorized to perform: events:PutRule on resource: arn:aws:events:ap-northeast-1:xxxxxxxxxxxx:rule/**********-xxxxxxxxxxxxxxxxxxxxxxxxxx-xxxxxxxxxxxxx (Service: AmazonCloudWatchEvents; Status Code: 400; Error Code: AccessDeniedException; Request ID: xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx)
 ```
 
-エラーメッセージをググると出るのですが、これはLambdaをCloudWatchからきっくするためのキックするための`EventBridge`の権限が足りていないことがエラーの原因です。
+エラーメッセージをググると出るのですが、これはLambdaをCloudWatchからキックするための`EventBridge`のルール作成権限が足りていないことがエラーの原因です。
 
 このへんの権限管理は手でIAMポリシーをポチポチやってしまったのですが、ゆくゆくは構成管理したい。
 
@@ -213,6 +216,27 @@ User: arn:aws:iam::xxxxxxxxxxxx:user/xxxxxxxx is not authorized to perform: even
     ]
 }
 ```
+
+#### LambdaをCloudWatchから定期実行できるようにする
+
+先ほどCloudWatchからLambdaをキックするルールをデプロイ時に作成するために、`EventBridge`のルール作成権限をデプロイするユーザに付与しました。
+
+それとは別に、このLambda関数を`EventBridge`からキックしてもいいというパーミッションをLambda関数に与えてあげる必要があります。これはAWS SAMで作りました。
+
+* template.yaml
+
+```yaml
+Resources:
+  (~snip~)
+  LambdaPermission:
+    Type: AWS::Lambda::Permission
+    Properties:
+      FunctionName: !Ref "DlsiteRSSFunction"
+      Action: lambda:InvokeFunction
+      Principal: events.amazonaws.com
+```
+
+AWSの権限管理は本当によくわからん。。。
 
 ## 所感
 

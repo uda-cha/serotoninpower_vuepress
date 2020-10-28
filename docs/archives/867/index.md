@@ -1,5 +1,5 @@
 ---
-title: '[Ruby]素のirbを立ち上げたあとにbunlder管理のgemをロードする方法'
+title: '[Ruby]素のirbを立ち上げたあとにbundler管理のgemをロードする方法'
 description: "いっつも忘れるので自分用メモ。"
 author: seroto_nin
 type: post

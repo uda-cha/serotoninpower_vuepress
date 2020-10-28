@@ -34,7 +34,8 @@ $ irb
 
 ```rb
 irb(main):001:0> ENV['BUNDLE_GEMFILE'] = File.expand_path('./Gemfile', __dir__)
-irb(main):002:0> Bundler.setup
+irb(main):002:0> require 'bundler'
+irb(main):003:0> Bundler.setup
 ```
 
 あとはお好きに`require_relative 'hoge/fuga'`などとローカルにあるRubyスクリプトを読みだすなりなんなり。

@@ -54,7 +54,6 @@ VMをFeroda 33で構築してさぁkubeadmインストールしようとした�
 - name: install docker
   dnf:
     name:
-    name:
       - https://download.docker.com/linux/fedora/32/x86_64/stable/Packages/containerd.io-1.3.7-3.1.fc32.x86_64.rpm
       - https://download.docker.com/linux/fedora/32/x86_64/stable/Packages/docker-ce-19.03.13-3.fc32.x86_64.rpm
       - https://download.docker.com/linux/fedora/32/x86_64/stable/Packages/docker-ce-cli-19.03.13-3.fc32.x86_64.rpm
@@ -91,7 +90,7 @@ Podをdescribeしてもあまり要領のいいエラーメッセージが出て
 [failed to find plugin "flannel" in path [/opt/cni/bin] failed to find plugin "portmap" in path [/opt/cni/bin]
 ```
 
-`flannel`やportmap`のプラグインが`/opt/cni/bin`にないよと怒られています。
+`flannel`や`portmap`のプラグインが`/opt/cni/bin`にないよと怒られています。
 
 findで探したところ、portmapやflannelコマンドは、`/opt/cni/bin`ではなく`/usr/libexec/cni`に配置されていました。
 このファイルは、`containernetworking-plugins`というrpmパッケージによってダウンロードされていました。

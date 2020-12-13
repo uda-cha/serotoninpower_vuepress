@@ -192,19 +192,19 @@ http {
 
 ## 実際のアクセス時のリクエストヘッダの確認
 
-### proxy1アクセスログ
+* proxy1アクセスログ
 
 ```bash
 proxy1_1   | time:2019-08-17T22:39:38+09:00     remote_addr:192.168.100.101     realip_remote_addr:192.168.100.101   request_method:GET      request_uri:/   uri:/   query_string:-  status:304      referer:-       useragent:Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/76.0.3809.100 Safari/537.36        host:192.168.100.201 forwardedhost:- realip:-        forwardedfor:-
 ```
 
-### proxy2アクセスログ
+* proxy2アクセスログ
 
 ```bash
 proxy2_1   | time:2019-08-17T22:39:38+09:00     remote_addr:192.168.100.101     realip_remote_addr:172.21.0.1   request_method:GET   request_uri:/   uri:/   query_string:-  status:304      referer:-       useragent:Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/76.0.3809.100 Safari/537.36        host:192.168.100.201 forwardedhost:192.168.100.201   realip:192.168.100.101  forwardedfor:192.168.100.101
 ```
 
-### backendアクセスログ
+* backendアクセスログ
 
 ```bash
 backend_1  | time:2019-08-17T22:39:38+09:00     remote_addr:192.168.100.101     realip_remote_addr:172.21.0.2   request_method:GET   request_uri:/   uri:/index.html query_string:-  status:304      referer:-       useragent:Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/76.0.3809.100 Safari/537.36        host:192.168.100.201 forwardedhost:192.168.100.201   realip:192.168.100.101  forwardedfor:192.168.100.101, 172.21.0.1
@@ -230,19 +230,19 @@ backend_1  | time:2019-08-17T22:39:38+09:00     remote_addr:192.168.100.101     
 
 `$ curl -H 'X-Forwarded-For:8.8.8.8' 192.168.100.201`
 
-### proxy1アクセスログ
+* proxy1アクセスログ
 
 ```bash
 proxy1_1   | time:2019-08-17T22:40:53+09:00     remote_addr:192.168.100.101     realip_remote_addr:192.168.100.101   request_method:GET      request_uri:/   uri:/   query_string:-  status:200      referer:-       useragent:curl/7.47.0        host:192.168.100.201    forwardedhost:- realip:-        forwardedfor:8.8.8.8
 ```
 
-### proxy2アクセスログ
+* proxy2アクセスログ
 
 ```bash
 proxy2_1   | time:2019-08-17T22:40:53+09:00     remote_addr:192.168.100.101     realip_remote_addr:172.21.0.1   request_method:GET   request_uri:/   uri:/   query_string:-  status:200      referer:-       useragent:curl/7.47.0   host:192.168.100.201 forwardedhost:192.168.100.201   realip:192.168.100.101  forwardedfor:192.168.100.101
 ```
 
-### backendアクセスログ
+* backendアクセスログ
 
 ```bash
 backend_1  | time:2019-08-17T22:40:53+09:00     remote_addr:192.168.100.101     realip_remote_addr:172.21.0.2   request_method:GET   request_uri:/   uri:/index.html query_string:-  status:200      referer:-       useragent:curl/7.47.0        host:192.168.100.201    forwardedhost:192.168.100.201   realip:192.168.100.101  forwardedfor:192.168.100.101, 172.21.0.1
@@ -276,4 +276,3 @@ log_format ltsv 'time:$time_iso8601\t'
                 'realip:$http_x_real_ip\t'
                 'forwardedfor:$http_x_forwarded_for\t';
 ```
-

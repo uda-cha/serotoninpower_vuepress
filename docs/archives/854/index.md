@@ -28,22 +28,23 @@ Python 3.6.9
 
 ## 正規表現のコンパイルとは
 
-https://docs.python.org/ja/3/library/re.html#re.compile
+[docs.python.org#re.compile](https://docs.python.org/ja/3/library/re.html#re.compile)
 
 正規表現パターン文字列を正規表現オブジェクトに変換する処理です。
 
 まさしく上記のドキュメントに書いてありますが、
 
-> ```
+> ```python
 > prog = re.compile(pattern)
 > result = prog.match(string)
 > ```
+>
 > は、以下と同等です
-> 
-> ```
+>
+> ```python
 > result = re.match(pattern, string)
 > ```
-> 
+>
 > が、 `re.compile()` を使い、結果の正規表現オブジェクトを保存して再利用するほうが、一つのプログラムでその表現を何回も使うときに効率的です。
 
 とあるように、コンパイルしなくとも正規表現のマッチングはできるのですが、結局マッチングの際に内部的にコンパイルが行われるため、同じ正規表現パターンを何度も使いまわす場合、コンパイルしておいた方が計算コストが下がるとのこと。
@@ -92,28 +93,28 @@ if __name__ == "__main__":
  import re
  import sys
  import time
- 
+
  def process(n):
- 
+
    patern = "^\d{3}[^0-9]\d{4}$"
 +  compiled = re.compile(patern)
    char = '0123456789-'
- 
+
    targets = []
    for i in range(n):
      targets.append(''.join([random.choice(char) for j in range(8)]))
- 
+
    counter = 0
    start = time.time()
- 
+
    for t in targets:
 -    if re.match(patern, t):
 +    if compiled.match(t):
        counter += 1
- 
+
    elapsed = time.time() - start
    print(str(counter) + " times matched. elapsed: " + str(elapsed))
- 
+
  if __name__ == "__main__":
    process(int(sys.argv[1]))
 

@@ -170,23 +170,16 @@ Get apache2 statusで取得した結果を正規表現でパースし、｢`Serv
 
 ここからいろいろテンプレートを直していきました。
 
-### Get apache2 status
+### Get apache2 statusの修正
 
 以下のようにアイテムのKeyを修正します。`$STUB_STATUS_PROTO`として、プロトコルを指定する変数を追加し、併せてKey名を独自定義のものに修正しました。
 
-#### 修正前
-
-```bash
-Key: web.page.get[{$STUB_STATUS_HOST},{$STUB_STATUS_PATH},{$STUB_STATUS_PORT}]
+```diff
+-Key: web.page.get[{$STUB_STATUS_HOST},{$STUB_STATUS_PATH},{$STUB_STATUS_PORT}]
++Key: mykey.curl[{$STUB_STATUS_PROTO},{$STUB_STATUS_HOST},{$STUB_STATUS_PATH},{$STUB_STATUS_PORT}]
 ```
 
-#### 修正後
-
-```bash
-Key: mykey.curl[{$STUB_STATUS_PROTO},{$STUB_STATUS_HOST},{$STUB_STATUS_PATH},{$STUB_STATUS_PORT}]
-```
-
-### Get apache2 status: Version
+### Get apache2 status: Versionの修正
 
 UserParameterを使い、Zabbixエージェントにhttpd -vを打たせてApacheのバージョンを取得させる想定で修正します。
 
@@ -195,25 +188,18 @@ UserParameterを使い、Zabbixエージェントにhttpd -vを打たせてApach
 * 取得できるデータ型もCharacter(一文字)からText(複数文字)に変更しておきます。
 * Preprocessingは不要ですので、項目ごと削除します。
 
-#### 修正前
-
-```bash
-Type: Dependent item
-Key: apache2_version
-Type of information: Character
-Preprocessing steps:
-  Name: Regular expression
-  Parameters: ServerVersion: \s*(.+)
-              \1
-```
-
-#### 修正後
-
-```bash
-Type: Zabbix agent
-Key: mykey.httpd_v
-Type of information: Text
-Preprocessing steps: なし
+```diff
+-Type: Dependent item
++Type: Zabbix agent
+-Key: apache2_version
++Key: mykey.httpd_v
+-Type of information: Character
++Type of information: Text
+-Preprocessing steps:
+-  Name: Regular expression
+-  Parameters: ServerVersion: \s*(.+)
+-              \1
++Preprocessing steps: なし
 ```
 
 ## アイテム｢Get apache2 status｣のトリガを修正する

@@ -165,7 +165,7 @@ Lambda実行ロールも読み書きするので、IAMのroleを操作する権�
 
 最後まで残っていたのがこのエラーメッセージ。
 
-```
+```sh
 User: arn:aws:iam::xxxxxxxxxxxx:user/xxxxxxxx is not authorized to perform: events:PutRule on resource: arn:aws:events:ap-northeast-1:xxxxxxxxxxxx:rule/**********-xxxxxxxxxxxxxxxxxxxxxxxxxx-xxxxxxxxxxxxx (Service: AmazonCloudWatchEvents; Status Code: 400; Error Code: AccessDeniedException; Request ID: xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx)
 ```
 

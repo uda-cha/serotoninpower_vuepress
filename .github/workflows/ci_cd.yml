@@ -31,10 +31,12 @@ jobs:
           ${{ runner.os }}-
     - name: Install Dependencies
       run: npm ci
-    - name: Test
+    - name: eslint
       run: npm run lint
       env:
         CI: true
+    - name: markdownlint
+      run: npm run mdlint
     - name: Build
       if: ${{ github.event_name == 'push' && github.ref == 'refs/heads/master' }}
       run: npm run build

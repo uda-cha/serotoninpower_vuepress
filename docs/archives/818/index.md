@@ -27,6 +27,7 @@ categories:
 ## 実装方針
 
 * カテゴリは各記事のマークダウンのfrontmatterに記載されているものとする。↓のような感じで。
+
 ```yaml
 ---
 (~snip~)
@@ -35,6 +36,7 @@ categories:
   - VuePress
 (~snip~)
 ```
+
 * カテゴリ一覧ページを作り、全記事のカテゴリとその記事数を表示させる
   * カテゴリをクリックすると、そのカテゴリを持つ記事のみがフィルタされて表示されるようにする
 * カテゴリはカテゴリ一覧ページだけでなく、各記事の個別ページや、記事一覧ページにも
@@ -278,7 +280,6 @@ v-forで回したい要素`selectedPosts`自体に変更があった際にうま
 
 でもあんまり良いやり方じゃないっぽい。ESLintでもthisが不定になるからやめんかいってエラーでます。そのうち直します。
 
-
 ```bash
 $ docker-compose run --rm node npx eslint docs/.vuepress/components/* --no-ignore
 
@@ -294,4 +295,3 @@ $ docker-compose run --rm node npx eslint docs/.vuepress/components/* --no-ignor
 あとはコメント機能を実装すれば大体VuePressでやりたいことは完成な感じです。ただ各コンポーネントをもっと小さい単位に分けたほうがいいんでしょうね。メンテしづらかったです。
 
 フロントエンドは目で見てすぐ結果がわかるので楽しいですね。
-

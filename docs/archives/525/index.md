@@ -130,7 +130,7 @@ before = paths-fedora.conf
 
 ここでfail2banの基本動作を定義します。ここで定義した動作は、後述のMWごとのセクションでオーバーライド可能です。基本的な部分のみ書いておきます。
 
-#### ignoreip
+#### DEFAULT.ignoreip
 
 fail2banが無視するホストを定義します。信頼できるホストをここで定義します。IPアドレス、CIDRでのマスク、DNSホスト名いずれも定義に使えます。複数ホストを列挙する場合はスペース区切りで。
 
@@ -138,7 +138,7 @@ fail2banが無視するホストを定義します。信頼できるホストを
 ignoreip = 127.0.0.1/8
 ```
 
-#### bantime
+#### DEFAULT.bantime
 
 バンする期間を定義します。デフォルトだと600秒。
 
@@ -146,7 +146,7 @@ ignoreip = 127.0.0.1/8
 bantime  = 600
 ```
 
-#### findtimeとmaxretry
+#### DEFAULT.findtimeとDEFAULT.maxretry
 
 findtimeの期間中に、maxretryの回数ログイン試行が失敗した場合にバンします。デフォルトだと600秒中に5回。
 
@@ -155,7 +155,7 @@ findtime  = 600
 maxretry = 5
 ```
 
-#### backend
+#### DEFAULT.backend
 
 ログを監視するバックエンドモジュールの指定。pythonモジュールpyinotifyを利用したりsystemdのjounalctlを利用したりいろいろあります。デフォルトはauto。きっと性能を求めるならこれは変更しないといけない。
 
@@ -163,7 +163,7 @@ maxretry = 5
 backend = auto
 ```
 
-#### usedns
+#### DEFAULT.usedns
 
 各ログにホストネームにてアクセスログが記載されていた場合に、自前でIPアドレスを逆引きするかどうかを指定します。firewalldやそのバックのiptablesは、ホスト名でアクセス制御を行うことができないため、IPアドレスの情報は必須です。なので、ログにホストネームしか記載がなかった場合、それをIPアドレスに解決しないといけません。しかし、ホストネームはいくらでも変更できるため信用できませんし、大量のアクセスを食らった際にいちいち名前解決を行うとそれだけでDoSです。
 
@@ -173,7 +173,7 @@ usednsは、yesだと黙って逆引きをする、warnだと逆引きはする�
 usedns = warn
 ```
 
-#### enabled
+#### DEFAULT.enabled
 
 fail2banを有効にするかどうか。DEFAULTセクションでは無効にしておいて、有効化するサービスのセクションで有効に上書きするのがいいと思います。
 
@@ -181,7 +181,7 @@ fail2banを有効にするかどうか。DEFAULTセクションでは無効に�
 enabled = false
 ```
 
-#### banactionとbanaction_allports
+#### DEFAULT.banactionとDEFAULT.banaction_allports
 
 バンを行うときのアクションの基本を定義します。実際は、アクション定義ファイルにてメール通報を行ってログに書いてバンする、と細かく書いてありますが、この実際のバンをどうやるか指定するのがここです。
 
@@ -215,7 +215,7 @@ banaction_allports = firewallcmd-allports
 
 ここから各MWごとの設定になります。
 
-#### port
+#### sshd.port
 
 バンを行うポート番号です。デフォルトでsshという定義(22)がされています。カンマ区切りで列挙、コロンで連番を指定できます。ちなみにudpを指定したい場合は、portではなくprotocolというディレクティブで別に定義します。
 
@@ -224,14 +224,14 @@ port    = ssh,10022
 #port    = 0:65535 #全ポート遮断したい場合
 ```
 
-#### logpath
+#### sshd.logpath
 
 監視を行うsshdのログのパス。この変数はpaths-common.confで定義されていました。
 
 ```bash
 logpath = %(sshd_log)s```
 
-#### backend
+#### shd.ackend
 
 sshdのログを監視するバックエンドモジュール。[DEFAULT]セクションではautoに設定されていましたが、paths-fedora.confでsystemdへオーバーライドされていました。
 
@@ -239,7 +239,7 @@ sshdのログを監視するバックエンドモジュール。[DEFAULT]セク�
 backend = %(sshd_backend)
 ```
 
-#### enabled
+#### sshd.enabled
 
 有効化するのでenabledに。
 
@@ -247,7 +247,7 @@ backend = %(sshd_backend)
 enabled = true
 ```
 
-#### filter
+#### sshd.filter
 
 基本的に、セクション名(今回はsshd)と同名のフィルタが、filter.d/に存在していれば、それが使用されます。それ以外にフィルタを追加したい場合はこのディレクティブを使います。なんかより積極的な検知ができるフィルタがあるとのことなので、追加で有効化しておきます。
 

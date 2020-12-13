@@ -197,7 +197,7 @@ $ cat /samba/share/sambatest.txt
 ## 参考
 
 - [Samba4を「ふつうに」使おう！(2015/08/08 OSC 2015 Kansai@Kyoto)][1]
-- [[Linux]sambaでフルアクセス（認証なし）の共有フォルダ作成 ][2]
+- [[Linux]sambaでフルアクセス（認証なし）の共有フォルダ作成][2]
 - [CentOS7にSambaをインストール][3]
 
  [1]: https://www.slideshare.net/takahashimotonobu/samba420150809-osc-2015-kansaikyoto

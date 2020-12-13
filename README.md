@@ -27,6 +27,12 @@ $ docker-compose run --rm node npm run build
 $ docker-compose run --rm node npm run lint --silent
 ```
 
+## markdownlint
+
+```shell
+$ docker-compose run --rm node npm run mdlint --silent
+```
+
 ## firebaseへのデプロイ
 
 - デプロイ前にビルドをやる

@@ -26,4 +26,3 @@ sitemap:
 ## Json1
 
 [Json1 Feed](/feed.json)
-

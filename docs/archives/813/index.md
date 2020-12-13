@@ -100,7 +100,6 @@ WordPressからVuePressに記事を移行するにあたり、DBからダンプ�
 * `limit`属性を受け入れ、デフォルトでは全ての記事の一覧を、`limit`属性が指定されたときはその記事数分を表示するようにしています。
 * `続きを読む`で各記事へリンクを貼っています。
 
-
 `PostList.vue`
 
 ```js
@@ -149,7 +148,6 @@ export default {
 `PostList.vue`から呼んだり、各記事のページから読んだりするので別コンポーネントに分けたやつです。
 
 VuePressはデフォルトで`Stylus`が使えます。私ポストCSSは`Sass`しか触ったことなかったんですけどいいですねこれ。`npm install -D sass-loader node-sass`すれば`Sass`も使えます。
-
 
 `CategoriesAndDate.vue`
 
@@ -260,7 +258,6 @@ module.exports = {
 
 [ekoeryanto/vuepress-plugin-sitemap](https://github.com/ekoeryanto/vuepress-plugin-sitemap)
 
-
 ### RSSとかのFeedを作る
 
 これまたありがたいことにプラグインがあります。
@@ -291,5 +288,3 @@ DBやミドルウェアの管理から解放されるのは素晴らしいです
 
 * カテゴリによる記事検索機能の追加
 * コメント機能の追加(いるか？)
-
-

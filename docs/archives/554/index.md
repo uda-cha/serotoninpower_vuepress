@@ -27,6 +27,7 @@ categories:
 う～ん図示能力がうんこ！ｗ Zabbixサーバに入れる`zabbix_agentd`とZabbixエージェントに入れる`zabbix_agentd`でPoling/Trap通信の流れが異なることがポイント。後で詳述します。
 
 ![presentation.jpg](./presentation.jpg)
+
 ## 環境
 
 本ブログを書く検証用にZabbixサーバ、ZabbixエージェントはVagrantで作成しました。実際に運用中のZabbixサーバはおうちESXi上で稼働しており、エージェントはいろんなサーバに入っています。
@@ -95,7 +96,7 @@ $ tree /etc/ansible/roles/install_docker --charset=N
 2 directories, 2 files
 ```
 
-### tasks/main.yml
+### dockerインストール用tasks/main.yml
 
 作業用フォルダを作るtaskがありますが、本手順ではなくてもいいです。
 
@@ -148,7 +149,7 @@ $ tree /etc/ansible/roles/install_docker --charset=N
 ...
 ```
 
-### handlers/main.yml
+### dockerインストール用handlers/main.yml
 
 ```yaml
 ---
@@ -185,7 +186,7 @@ roleを呼び出すだけのPlaybookを作成します。
     - install_docker
 ```
 
-### ansible-playbookコマンド実行
+### zabbix_agentdインストールansible-playbookコマンド実行
 
 ansible-playbookコマンドを利用します。-kオプションで`ansible_ssh_user`のログインパスワードを対話的に入力します。sudo時にパスワード入力が必要な環境では、-Kオプションを付与してsudoパスワードも対話的に入力するようにします。
 
@@ -235,7 +236,7 @@ $ tree /etc/ansible/roles/install_zabbix_agent --charset=N
 2 directories, 2 files
 ```
 
-### tasks/main.yml
+### zabbin_agentdインストール用tasks/main.yml
 
 ```yaml
 ---
@@ -304,7 +305,7 @@ $ tree /etc/ansible/roles/install_zabbix_agent --charset=N
 ...
 ```
 
-### handlers/main.yml
+### zabbin_agentdインストール用handlers/main.yml
 
 ```yaml
 ---
@@ -385,7 +386,7 @@ $ docker exec -it f3f295920386 /bin/bash
     - install_zabbix_agent
 ```
 
-### ansible-playbookコマンド実行
+### dockerインストールansible-playbookコマンド実行
 
 Ansibleサーバにて。
 

@@ -148,7 +148,7 @@ C:\Users\serotonin>vagrant destroy
 - [Vagrant Cloud上に公開されたBoxを利用する方法][2]
 - [Vagrant で NIC の MAC アドレスを変更する][3]
 - [HashiCorp Vagrant Networking Public Networks][4]
-- [HashiCorp Vagrant synced-folders basic_usage ][5]
+- [HashiCorp Vagrant synced-folders basic_usage][5]
 
  [1]: http://qiita.com/hiroyasu55/items/11a4c996b0c62450940f
  [2]: http://www.punio.org/blog/201407251905VVAW.html

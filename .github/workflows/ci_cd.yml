@@ -1,26 +1,23 @@
-name: Node.js CD
+name: Node.js CI/CD
 
 on:
+  pull_request:
   push:
     branches:
       - master
 
 jobs:
-  build:
-
+  ci_cd:
     runs-on: ubuntu-latest
-
     strategy:
       matrix:
-        node-version: [13.x]
-
+        node-version: [14.x]
     steps:
     - uses: actions/checkout@v2
     - name: Use Node.js ${{ matrix.node-version }}
       uses: actions/setup-node@v1
       with:
         node-version: ${{ matrix.node-version }}
-
     - name: Cache node modules
       uses: actions/cache@v1
       env:
@@ -32,19 +29,17 @@ jobs:
           ${{ runner.os }}-build-${{ env.cache-name }}-
           ${{ runner.os }}-build-
           ${{ runner.os }}-
-
     - name: Install Dependencies
       run: npm ci
-
     - name: Test
       run: npm run lint
       env:
         CI: true
-
     - name: Build
+      if: ${{ github.event_name == 'push' && github.ref == 'refs/heads/master' }}
       run: npm run build
-
     - name: Deploy
+      if: ${{ github.event_name == 'push' && github.ref == 'refs/heads/master' }}
       run: npx firebase deploy --token $FIREBASE_TOKEN
       env:
         FIREBASE_TOKEN: ${{ secrets.FIREBASE_TOKEN }}

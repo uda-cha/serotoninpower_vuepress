@@ -1,8 +1,8 @@
 name: Node.js CI/CD
 
 on:
-- pull_request
-- push:
+  pull_request:
+  push:
     branches:
       - master
 
@@ -11,7 +11,7 @@ jobs:
     runs-on: ubuntu-latest
     strategy:
       matrix:
-        node-version: [13.x]
+        node-version: [14.x]
     steps:
     - uses: actions/checkout@v2
     - name: Use Node.js ${{ matrix.node-version }}

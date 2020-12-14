@@ -2,10 +2,10 @@
 <template>
   <div>
     <h2>コメント</h2>
-    <div v-if="loading" class="loading" />
     <div v-if="getErrorCode > 0" class="errors">
       {{ getErrorCode }}: エラーが発生しました。時間をおいて再度お試しください。
     </div>
+    <div v-if="loading" class="loading" />
     <div
       v-else-if="comments.length"
       v-for="(value, key) in comments" :key="key"

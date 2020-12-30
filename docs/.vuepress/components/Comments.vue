@@ -6,21 +6,13 @@
       {{ getErrorCode }}: エラーが発生しました。時間をおいて再度お試しください。
     </div>
     <div v-if="loading" class="loading" />
-    <div
+    <Comment
       v-else-if="comments.length"
-      v-for="(value, key) in comments" :key="key"
-      class="comment">
-      <div class="comment_head">
-        <span class="comment_head_number">#{{ key + 1 }}</span>
-        <span class="comment_head_name">{{ value.name }}</span>
-        <span class="comment_head_date">
-          <Date v-bind:input_date=value.updated_at />
-        </span>
-      </div>
-      <div class="comment_body">
-        <p>{{ value.content }}</p>
-      </div>
-    </div>
+      v-for="(value, key) in comments" v-bind:key="key"
+      v-bind:idx=key
+      v-bind:name="value.name"
+      v-bind:content="value.content"
+      v-bind:updated_at="value.updated_at" />
     <div v-else>コメントはありません。</div>
     <h2>コメントする</h2>
       <div class="errors" v-if="postErrorCode > 0" >
@@ -129,36 +121,6 @@ export default {
   background:url(/loading.gif) center center no-repeat
   width 100%
   height 200px
-
-.comment
-  border-radius 5px
-  border 1px solid #ccc
-  padding 0.5rem
-  margin-bottom 1rem
-
-comment_head_span()
-  display inline-block
-  padding-right 1rem
-  font-size 1rem
-
-.comment_head_number
-  comment_head_span()
-
-.comment_head_name
-  comment_head_span()
-  color #008000
-
-.comment_head_name_admin
-  comment_head_span()
-  color #ff4500
-
-.comment_head_date
-  comment_head_span()
-
-.comment_body
-  padding 0 0.5rem
-  word-break break-all
-  font-size 0.9rem
 
 content_in_input_wrapper()
   padding 10px

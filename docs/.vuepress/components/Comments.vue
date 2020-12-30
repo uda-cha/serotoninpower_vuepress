@@ -2,9 +2,7 @@
 <template>
   <div>
     <h2>コメント</h2>
-    <div v-if="getErrorCode > 0" class="errors">
-      {{ getErrorCode }}: エラーが発生しました。時間をおいて再度お試しください。
-    </div>
+    <ApiError v-if="getErrorCode > 0" v-bind:errorCode="getErrorCode" />
     <div v-if="loading" class="loading" />
     <Comment
       v-else-if="comments.length"
@@ -15,9 +13,7 @@
       v-bind:updated_at="value.updated_at" />
     <div v-else>コメントはありません。</div>
     <h2>コメントする</h2>
-      <div class="errors" v-if="postErrorCode > 0" >
-        {{ postErrorCode }}: エラーが発生しました。時間をおいて再度お試しください。
-      </div>
+      <ApiError v-if="postErrorCode > 0" v-bind:errorCode="postErrorCode" />
       <div class="input_wrapper">
         <div class="label">name</div>
         <div class="content">
@@ -111,12 +107,6 @@ export default {
 };
 </script>
 <style lang="stylus" scoped>
-.errors
-  background-color #FFEFEF
-  padding 0.5rem
-  color #C25338
-  border 1px solid #D4440D
-
 .loading
   background:url(/loading.gif) center center no-repeat
   width 100%

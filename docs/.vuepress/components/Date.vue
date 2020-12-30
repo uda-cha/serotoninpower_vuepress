@@ -1,9 +1,10 @@
 // Date.vue
 <template>
-  <span class="date">{{ date | moment }}</span>
+  <span class="date">{{ date | days }}</span>
 </template>
 <script>
-import moment from 'moment';
+import dayjs from 'dayjs';
+import 'dayjs/locale/ja';
 export default {
   props: {
     input_date: String,
@@ -18,8 +19,8 @@ export default {
     },
   },
   filters: {
-    moment: function(date) {
-      return moment(date).format('YYYY/MM/DD');
+    days: function(date) {
+      return dayjs(date).format('YYYY/MM/DD');
     },
   },
 };

@@ -61,5 +61,6 @@ module.exports = {
       ],
       canonical_base: 'https://www.serotoninpower.club/',
     }
-  }
+  },
+  evergreen: true
 }

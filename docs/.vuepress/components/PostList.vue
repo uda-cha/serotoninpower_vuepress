@@ -9,7 +9,7 @@
 <script>
 export default {
   props: {
-    limit: Number
+    limit: Number,
   },
   computed: {
     posts() {

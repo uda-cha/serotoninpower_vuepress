@@ -14,17 +14,7 @@
       </ul>
     </div>
     <transition-group tag="div">
-      <div v-for="(post) in selectedPosts" :key="post.key">
-        <h2>
-          <router-link v-bind:to="post.path">{{post.title}}</router-link>
-        </h2>
-        <Date v-bind:input_date=post.frontmatter.date />
-        <ShowCategoriesOfPost
-          v-bind:input_categories=post.frontmatter.categories
-        />
-        <p>{{post.frontmatter.description}}</p>
-        <router-link v-bind:to="post.path">続きを読む</router-link>
-      </div>
+      <Post v-for="(post, index) in selectedPosts" :key="index" v-bind="post" />
     </transition-group>
   </div>
 </template>

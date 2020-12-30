@@ -46,11 +46,8 @@ export default {
 
       Object.keys(post).forEach(function(p) {
         Object.keys(post[p].frontmatter.categories).forEach(function(c) {
-          if (res[post[p].frontmatter.categories[c]]) {
-            res[post[p].frontmatter.categories[c]]++;
-          } else {
-            res[post[p].frontmatter.categories[c]] = 1;
-          };
+          res[post[p].frontmatter.categories[c]] =
+            (res[post[p].frontmatter.categories[c]] || 0) + 1;
         });
       });
 
@@ -60,14 +57,12 @@ export default {
       if (!this.$route.query.category) {
         return;
       };
-      const res = this.$site.pages
+      return this.$site.pages
           .filter((post) => post.path.match(/^\/archives\/\d/))
           .filter((post) => post.frontmatter.categories.some((c) =>
             this.$route.query.category.includes(c)))
           .sort((a, b) =>
             new Date(b.frontmatter.date) - new Date(a.frontmatter.date));
-
-      return res;
     },
   },
 };

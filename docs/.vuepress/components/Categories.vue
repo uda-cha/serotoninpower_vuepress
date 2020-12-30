@@ -14,17 +14,7 @@
       </ul>
     </div>
     <transition-group tag="div">
-      <div v-for="(post) in selectedPosts" :key="post.key">
-        <h2>
-          <router-link v-bind:to="post.path">{{post.title}}</router-link>
-        </h2>
-        <Date v-bind:input_date=post.frontmatter.date />
-        <ShowCategoriesOfPost
-          v-bind:input_categories=post.frontmatter.categories
-        />
-        <p>{{post.frontmatter.description}}</p>
-        <router-link v-bind:to="post.path">続きを読む</router-link>
-      </div>
+      <Post v-for="(post, index) in selectedPosts" :key="index" v-bind="post" />
     </transition-group>
   </div>
 </template>
@@ -56,11 +46,8 @@ export default {
 
       Object.keys(post).forEach(function(p) {
         Object.keys(post[p].frontmatter.categories).forEach(function(c) {
-          if (res[post[p].frontmatter.categories[c]]) {
-            res[post[p].frontmatter.categories[c]]++;
-          } else {
-            res[post[p].frontmatter.categories[c]] = 1;
-          };
+          res[post[p].frontmatter.categories[c]] =
+            (res[post[p].frontmatter.categories[c]] || 0) + 1;
         });
       });
 
@@ -70,14 +57,12 @@ export default {
       if (!this.$route.query.category) {
         return;
       };
-      const res = this.$site.pages
+      return this.$site.pages
           .filter((post) => post.path.match(/^\/archives\/\d/))
           .filter((post) => post.frontmatter.categories.some((c) =>
             this.$route.query.category.includes(c)))
           .sort((a, b) =>
             new Date(b.frontmatter.date) - new Date(a.frontmatter.date));
-
-      return res;
     },
   },
 };

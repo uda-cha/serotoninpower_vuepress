@@ -1,9 +1,7 @@
 // PostList.vue
 <template>
   <div>
-    <div v-for="(post, index) in posts" :key="index">
-      <Post v-bind="post" />
-    </div>
+    <Post v-for="(post, index) in posts" :key="index" v-bind="post" />
   </div>
 </template>
 <script>

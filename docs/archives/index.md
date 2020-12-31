@@ -7,4 +7,4 @@ feed:
 
 # Archives
 
-<PostList />
+<Posts />

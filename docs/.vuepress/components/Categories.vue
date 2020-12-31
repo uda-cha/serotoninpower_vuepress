@@ -4,12 +4,14 @@
     <div>
       <ul class="categories">
         <li class="category" v-for="(value, key) in categories" :key="key">
-          <button
-            v-on:click="toggleSelectedCategories(key)"
-            v-bind:class="{active: isActive(key)}"
-          >
-            {{ key }} ({{ value }})
-          </button>
+          <span>
+            <router-link
+              v-bind:to="{path: '/categories/', query: toggleQuery(key)}"
+              v-bind:class="{active: isActive(key)}"
+            >
+              {{ key }} ({{ value }})
+            </router-link>
+          </span>
         </li>
       </ul>
     </div>
@@ -21,21 +23,21 @@
 <script>
 export default {
   methods: {
-    toggleSelectedCategories: function(c) {
-      const query = Object.assign({}, this.$route.query);
-      if (query.category && query.category.includes(c)) {
-        delete query.category;
-      } else {
-        query.category = c;
-      };
-      this.$router.push({query: query});
-    },
     isActive: function(c) {
       if (!this.$route.query.category) {
         return false;
       } else {
         return this.$route.query.category.includes(c);
       };
+    },
+    toggleQuery: function(c) {
+      const query = Object.assign({}, this.$route.query);
+      if (query.category && query.category.includes(c)) {
+        delete query.category;
+      } else {
+        query.category = c;
+      };
+      return query;
     },
   },
   computed: {
@@ -75,18 +77,23 @@ export default {
 
   .category
     display: inline-block
-    margin: 0.1rem
+    margin: 0.2rem
 
-    button
-      background-color: #FFF
-      border-color:  #c2d6ba
-      border-radius: 8px
-      color: #333
+    span
+      background-color: #c2d6ba
+      border-radius: 3px
       line-height: 1.5
       padding: 5px 10px
 
+      &:hover
+        opacity: 0.8
+
       &.active
         background-color: #c2d6ba
+
+      a
+        color: #333
+        font-weight: normal
 
 .v-enter-active
   transition: all .5s ease

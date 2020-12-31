@@ -3,15 +3,10 @@
   <div>
     <div>
       <ul class="categories">
-        <li class="category" v-for="(value, key) in categories" :key="key">
-          <span>
-            <router-link
-              v-bind:to="{path: '/categories/', query: toggleQuery(key)}"
-              v-bind:class="{active: isActive(key)}"
-            >
-              {{ key }} ({{ value }})
-            </router-link>
-          </span>
+        <li class="category"
+          v-for="(num, name) in categoryNameAndNumber"
+          v-bind:key="name">
+          <Category v-bind:categoryName="name" v-bind:categoryNumber="num" />
         </li>
       </ul>
     </div>
@@ -22,26 +17,8 @@
 </template>
 <script>
 export default {
-  methods: {
-    isActive: function(c) {
-      if (!this.$route.query.category) {
-        return false;
-      } else {
-        return this.$route.query.category.includes(c);
-      };
-    },
-    toggleQuery: function(c) {
-      const query = Object.assign({}, this.$route.query);
-      if (query.category && query.category.includes(c)) {
-        delete query.category;
-      } else {
-        query.category = c;
-      };
-      return query;
-    },
-  },
   computed: {
-    categories() {
+    categoryNameAndNumber() {
       const res = {};
       const post = this.$site.pages
           .filter((post) => typeof post.frontmatter.categories !== 'undefined');
@@ -52,7 +29,6 @@ export default {
             (res[post[p].frontmatter.categories[c]] || 0) + 1;
         });
       });
-
       return res;
     },
     selectedPosts() {
@@ -77,23 +53,7 @@ export default {
 
   .category
     display: inline-block
-    margin: 0.2rem
-
-    span
-      background-color: #c2d6ba
-      border-radius: 3px
-      line-height: 1.5
-      padding: 5px 10px
-
-      &:hover
-        opacity: 0.8
-
-      &.active
-        background-color: #c2d6ba
-
-      a
-        color: #333
-        font-weight: normal
+    margin: 0.25rem
 
 .v-enter-active
   transition: all .5s ease

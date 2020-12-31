@@ -1,4 +1,4 @@
-// PostList.vue
+// Posts.vue
 <template>
   <div>
     <Post v-for="(post, index) in posts" :key="index" v-bind="post" />

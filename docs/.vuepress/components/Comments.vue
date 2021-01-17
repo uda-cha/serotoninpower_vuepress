@@ -2,8 +2,8 @@
 <template>
   <div>
     <h2>コメント</h2>
-    <ApiError v-if="getErrorCode > 0" v-bind:errorCode="getErrorCode" />
     <div v-if="loading" class="loading" />
+    <ApiError v-else-if="getErrorCode > 0" v-bind:errorCode="getErrorCode" />
     <Comment
       v-else-if="comments.length"
       v-for="(value, key) in comments" v-bind:key="key"
@@ -34,7 +34,6 @@
   </div>
 </template>
 <script>
-import axios from 'axios';
 export default {
   data: function() {
     comments: Array;
@@ -67,13 +66,24 @@ export default {
   methods: {
     get_comments: function() {
       this.loading = true;
-      axios
-          .get(this.comment_url)
+      fetch(this.comment_url, {
+        method: 'GET',
+        headers: {
+          'Accept': 'application/json',
+        },
+      })
           .then((response) => {
-            this.comments = response.data.data;
+            if (response.ok) {
+              return response.json();
+            } else {
+              return Promise.reject(response);
+            };
+          })
+          .then((data) => {
+            this.comments = data.data;
           })
           .catch((error) => {
-            this.getErrorCode = error.response.status;
+            this.getErrorCode = error.status || 400;
           })
           .finally(() => {
             this.loading = false;
@@ -83,17 +93,31 @@ export default {
       this.sending = true;
       this.postErrorCode = 0;
       if (this.name && this.content) {
-        axios
-            .post(this.comment_url, {
-              name: this.name,
-              content: this.content,
-            })
+        const reqBody = JSON.stringify({
+          name: this.name,
+          content: this.content,
+        });
+        fetch(this.comment_url, {
+          method: 'POST',
+          headers: {
+            'Accept': 'application/json',
+            'Content-Type': 'application/json',
+          },
+          body: reqBody,
+        })
             .then((response) => {
+              if (response.ok) {
+                return response.json();
+              } else {
+                return Promise.reject(response);
+              };
+            })
+            .then((data) => {
               this.name = this.content = null;
               this.get_comments();
             })
             .catch((error) => {
-              this.postErrorCode = error.response.status;
+              this.postErrorCode = error.status || 400;
             })
             .finally(() => {
               this.sending = false;

@@ -6,9 +6,7 @@
   "directories": {
     "doc": "docs"
   },
-  "dependencies": {
-    "axios": "^0.21.0"
-  },
+  "dependencies": {},
   "devDependencies": {
     "@vuepress/plugin-back-to-top": "^1.7.1",
     "@vuepress/plugin-google-analytics": "^1.7.1",

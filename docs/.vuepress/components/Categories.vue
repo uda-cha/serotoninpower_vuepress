@@ -19,17 +19,17 @@
 export default {
   computed: {
     categoryNameAndNumber() {
-      const res = {};
-      const post = this.$site.pages
+      const posts = this.$site.pages
           .filter((post) => typeof post.frontmatter.categories !== 'undefined');
 
-      Object.keys(post).forEach(function(p) {
-        Object.keys(post[p].frontmatter.categories).forEach(function(c) {
-          res[post[p].frontmatter.categories[c]] =
-            (res[post[p].frontmatter.categories[c]] || 0) + 1;
-        });
-      });
-      return res;
+      const categories = posts.map((p) => p.frontmatter.categories)
+          .flat()
+          .reduce((res, current) => {
+            res[current] = (res[current] || 0) + 1;
+            return res;
+          }, {});
+
+      return categories;
     },
     selectedPosts() {
       if (!this.$route.query.category) {

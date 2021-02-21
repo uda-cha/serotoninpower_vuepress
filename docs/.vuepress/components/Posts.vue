@@ -8,7 +8,7 @@
 export default {
   props: {
     limit: {
-      type:    Number,
+      type:　Number,
       default: Infinity,
     },
   },

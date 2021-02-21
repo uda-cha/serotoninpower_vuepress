@@ -7,19 +7,19 @@
 <script>
 export default {
   props: {
-    limit: Number,
+    limit: {
+      type:    Number,
+      default: Infinity,
+    },
   },
   computed: {
     posts() {
-      let res = this.$site.pages
-          .filter((post) => post.path.match(/^\/archives\/\d/))
+      return this.$site.pages
+          .filter((p) => p.path.match(/^\/archives\/\d/))
           .sort((a, b) => (
             new Date(b.frontmatter.date) - new Date(a.frontmatter.date)),
-          );
-      if ( typeof this.limit !== 'undefined' ) {
-        res = res.slice(0, this.limit);
-      };
-      return res;
+          )
+          .slice(0, this.limit);
     },
   },
 };

@@ -13,7 +13,7 @@ categories:
 ---
 # {{this.$page.frontmatter.title}}
 
-<Date/><ShowCategoriesOfPost/>
+<Date/><CategoriesPerPost/>
 
 <span style="color: #ff0000;">20181026　DB作成のパーミッション周りの記述誤り・補足を修正・追加<br /> 20190617　DB再作成をバッチ化<br /> </span>
 

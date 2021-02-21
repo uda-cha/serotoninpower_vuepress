@@ -11,7 +11,7 @@ categories:
 ---
 # nginxでX-Forwarded-Forの値に`$proxy_add_x_forwarded_for`を安易に使わない方が良い
 
-<Date/><ShowCategoriesOfPost/>
+<Date/><CategoriesPerPost/>
 
 nginxでX-Forwarded-Forヘッダを付与するのに`$proxy_add_x_forwarded_for`という便利な変数がありますが、迂闊に設定するとちょっと危ないのでメモします。
 

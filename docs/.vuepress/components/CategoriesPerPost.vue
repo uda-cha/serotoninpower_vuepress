@@ -1,4 +1,4 @@
-// ShowCategoriesOfPost.vue
+// CategoriesPerPost.vue
 <template>
   <span>
     <ul class="categories">
@@ -15,11 +15,7 @@ export default {
   },
   computed: {
     categories() {
-      if ( typeof this.input_categories !== 'undefined' ) {
-        return this.input_categories;
-      } else {
-        return this.$page.frontmatter.categories;
-      };
+      return this.input_categories || this.$page.frontmatter.categories;
     },
   },
 };

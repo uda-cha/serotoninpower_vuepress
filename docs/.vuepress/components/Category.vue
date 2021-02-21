@@ -16,13 +16,9 @@ export default {
   },
   methods: {
     isActive: function(c) {
-      if (this.allwaysActive) {
-        return true;
-      } else if (!this.$route.query.category) {
-        return false;
-      } else {
-        return this.$route.query.category.includes(c);
-      };
+      return this.allwaysActive ||
+          (this.$route.query.category &&
+           this.$route.query.category.includes(c));
     },
     toggleQuery: function(c) {
       const query = Object.assign({}, this.$route.query);

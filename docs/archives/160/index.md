@@ -13,7 +13,7 @@ categories:
 ---
 # {{this.$page.frontmatter.title}}
 
-<Date/><ShowCategoriesOfPost/>
+<Date/><CategoriesPerPost/>
 
 <span style="color: #ff0000;">20180729 Sambaのセキュア化設定(SMBv1無効化、ディジタル署名有効化)とプリンタ関連のログ抑制設定を追加</span>
 

@@ -17,31 +17,41 @@
 </template>
 <script>
 export default {
+  data: function() {
+    posts: Array;
+    return {
+      posts: [],
+    };
+  },
   computed: {
     categoryNameAndNumber() {
-      const posts = this.$site.pages
-          .filter((post) => typeof post.frontmatter.categories !== 'undefined');
-
-      const categories = posts.map((p) => p.frontmatter.categories)
+      return this.posts
+          .map((p) => p.frontmatter.categories)
           .flat()
           .reduce((res, current) => {
             res[current] = (res[current] || 0) + 1;
             return res;
           }, {});
-
-      return categories;
     },
     selectedPosts() {
-      if (!this.$route.query.category) {
-        return;
-      };
-      return this.$site.pages
-          .filter((post) => post.path.match(/^\/archives\/\d/))
-          .filter((post) => post.frontmatter.categories.some((c) =>
-            this.$route.query.category.includes(c)))
-          .sort((a, b) =>
-            new Date(b.frontmatter.date) - new Date(a.frontmatter.date));
+      return this.posts
+          .filter((p) => this.$route.query.category)
+          .filter((p) => p.frontmatter.categories.some((c) =>
+            this.$route.query.category.includes(c)));
     },
+  },
+  methods: {
+    get_posts: function() {
+      this.posts =
+        this.$site.pages
+            .filter((p) => p.path.match(/^\/archives\/\d/))
+            .filter((p) => typeof p.frontmatter.categories !== 'undefined')
+            .sort((a, b) =>
+              new Date(b.frontmatter.date) - new Date(a.frontmatter.date));
+    },
+  },
+  mounted: function() {
+    this.get_posts();
   },
 };
 </script>

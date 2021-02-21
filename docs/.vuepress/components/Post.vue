@@ -5,7 +5,7 @@
       <router-link v-bind:to="path">{{title}}</router-link>
     </h2>
     <Date v-bind:input_date=frontmatter.date />
-    <ShowCategoriesOfPost
+    <CategoriesPerPost
       v-bind:input_categories=frontmatter.categories
     />
     <p>{{frontmatter.description}}</p>

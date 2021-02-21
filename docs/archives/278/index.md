@@ -13,7 +13,7 @@ categories:
 ---
 # {{this.$page.frontmatter.title}}
 
-<Date/><ShowCategoriesOfPost/>
+<Date/><CategoriesPerPost/>
 
 [以前の記事][1]でWindows上にてSquidを動かした際、Windowsサービス化ができなくて、ドス窓を閉じたりサインアウトしたりするとSquidのプロセスが停止してしまう問題がありました。ようやっとこれが解決したのでまとめます。
 

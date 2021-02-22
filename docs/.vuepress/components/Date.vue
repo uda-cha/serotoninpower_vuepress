@@ -11,11 +11,7 @@ export default {
   },
   computed: {
     date() {
-      if ( typeof this.input_date !== 'undefined' ) {
-        return this.input_date;
-      } else {
-        return this.$page.frontmatter.date;
-      };
+      return this.input_date || this.$page.frontmatter.date;
     },
   },
   filters: {

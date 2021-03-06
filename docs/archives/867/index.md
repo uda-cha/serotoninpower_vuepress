@@ -34,8 +34,16 @@ $ irb
 
 ```rb
 irb(main):001:0> ENV['BUNDLE_GEMFILE'] = File.expand_path('./Gemfile', __dir__)
+irb(main):002:0> require 'bundler/setup'
+```
+
+ちなみに、`setup`のタイミングを任意に設定したい場合は、`require 'bundler'`したあとに、`setup`死体タイミングで`Bundler.setup`を実行する。
+
+```rb
+irb(main):001:0> ENV['BUNDLE_GEMFILE'] = File.expand_path('./Gemfile', __dir__)
 irb(main):002:0> require 'bundler'
-irb(main):003:0> Bundler.setup
+irb(main):003:0> # 任意の処理
+irb(main):004:0> Bundler.setup
 ```
 
 あとはお好きに`require_relative 'hoge/fuga'`などとローカルにあるRubyスクリプトを読みだすなりなんなり。

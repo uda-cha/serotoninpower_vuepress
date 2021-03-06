@@ -37,7 +37,7 @@ irb(main):001:0> ENV['BUNDLE_GEMFILE'] = File.expand_path('./Gemfile', __dir__)
 irb(main):002:0> require 'bundler/setup'
 ```
 
-ちなみに、`setup`のタイミングを任意に設定したい場合は、`require 'bundler'`したあとに、`setup`死体タイミングで`Bundler.setup`を実行する。
+ちなみに、任意のタイミングで`setup`したい場合は、`require 'bundler'`したあとに、`setup`したいタイミングで`Bundler.setup`を実行する。
 
 ```rb
 irb(main):001:0> ENV['BUNDLE_GEMFILE'] = File.expand_path('./Gemfile', __dir__)

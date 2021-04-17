@@ -55,7 +55,7 @@ export default {
   },
   computed: {
     comment_url: function() {
-      return 'https://serotoninpower-cms.herokuapp.com/v1/posts/' +
+      return 'https://cms.serotoninpower.club/v1/posts/' +
         this.$page.regularPath.split('/').slice(-2)[0] +
         '/comments';
     },

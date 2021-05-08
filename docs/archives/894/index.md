@@ -80,7 +80,7 @@ misc100: tcpdump capture file (little-endian) - version 0.0, capture length 1869
 strings misc100 | sed -e 's/[lovelive!]//g'
 ```
 
-## Q19.[Misc]Image!
+## Q19.[Misc]`Image!`
 
 ```sh
 $ file misc100.zip
@@ -113,7 +113,7 @@ $ ./a.out ruoYced_ehpigniriks_i_llrg_stae 4
 
 後から思えば、大文字`Y`の場所に着目してはじめから4を入れればよかった。
 
-## Q21.[Reversing]reversing easy!
+## Q21.[Reversing]`reversing easy!`
 
 ```sh
 $ file rev100
@@ -225,3 +225,4 @@ pcapファイルが渡されるので、WireSharkで開くと、平文のFTP通�
 
 雰囲気で`gdb`使っていたので、この機会に`radare2`ちゃんと覚えたい。
 
+<Comments />

@@ -21,7 +21,7 @@ categories:
 
 ## システム構成図
 
-![system.jpg](system.jpg)
+![system.jpg](./system.jpg)
 
 ## terraform
 

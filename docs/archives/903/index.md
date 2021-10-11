@@ -25,7 +25,7 @@ categories:
 
 ## terraform
 
-https://github.com/uda-cha/minecraft_on_aws_ecs
+[https://github.com/uda-cha/minecraft_on_aws_ecs](https://github.com/uda-cha/minecraft_on_aws_ecs)
 
 `terraform apply`するだけで同じ環境が作れる(はず)
 
@@ -33,11 +33,11 @@ https://github.com/uda-cha/minecraft_on_aws_ecs
 
 * 1つのVPCとsubnetをつくって、その中に全部入れる
 * Elastic IPとNLBを使って固定IPを設定
-    * NLBのターゲットはVPC全体
-    * NLBリスナー/ターゲットともにマイクラのポートのみ
+  * NLBのターゲットはVPC全体
+  * NLBリスナー/ターゲットともにマイクラのポートのみ
 * EFSを払い出し、ECSコンテナからマウントしてマインクラフトのデータを永続化する
 * ECSクラスタをVPC内にデプロイ
-    * ECSクラスタはVM管理が不要なFargateを選択
+  * ECSクラスタはVM管理が不要なFargateを選択
 * コンテナイメージは[itzg/docker-minecraft-server](https://github.com/itzg/docker-minecraft-server)を拝借
 * アプリケーションサーバはPaperを選択
 
@@ -47,11 +47,11 @@ https://github.com/uda-cha/minecraft_on_aws_ecs
 ## やっていないこと
 
 * ログ監視/メトリクス監視
-    * CloudWatchからよしなにやりたい。
+  * CloudWatchからよしなにやりたい。
 * 負荷検証
-    * 負荷かけられるほどの人を集めることができない。 
+  * 負荷かけられるほどの人を集めることができない。
 * グレースフルリスタート
-    * そもそもマイクラのアーキテクチャとして可能なのかな？ 
+  * そもそもマイクラのアーキテクチャとして可能なのかな？
 
 ## ハマったこと
 

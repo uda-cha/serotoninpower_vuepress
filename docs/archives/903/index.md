@@ -21,6 +21,8 @@ categories:
 
 ## システム構成図
 
+![system.jpg](system.jpg)
+
 ## terraform
 
 https://github.com/uda-cha/minecraft_on_aws_ecs

@@ -63,20 +63,66 @@ func (c DiscordWebHookConfig) Validate() (err error) {
 	return
 }
 
-func SendToDiscord(msgSlice []string) (err error) {
-	config := DiscordWebHookConfig{
+func CreateDiscordWebHookConfig() (config DiscordWebHookConfig, err error) {
+	config = DiscordWebHookConfig{
 		webhookID:    os.Getenv("WEBHOOK_ID"),
 		webhookToken: os.Getenv("WEBHOOK_TOKEN"),
 	}
 
-	if err := config.Validate(); err != nil {
+	err = config.Validate()
+
+	return config, err
+}
+
+func CreateDiscordWebHookClient() (client *webhook.Client, err error) {
+	config, err := CreateDiscordWebHookConfig()
+
+	if err != nil {
+		return nil, err
+	}
+
+	client = webhook.NewClient(discord.Snowflake(config.webhookID), config.webhookToken)
+
+	return client, nil
+}
+
+// Discord Webhookで一度に送ることができるサイズである2000バイト以内にスライスの各要素を再構築する
+func ReconstructSlicesforDiscordLimit(msgSlice []string) (newMsgSlice []string) {
+	var currentSlice []string
+
+	for i, msg := range msgSlice {
+		if i == 0 {
+			currentSlice = append(currentSlice, msg)
+		} else {
+			if len(strings.Join(currentSlice, "\r")+msg) >= 2000 {
+				str := strings.Join(currentSlice, "\r")
+				newMsgSlice = append(newMsgSlice, str)
+				currentSlice = []string{msg}
+			} else {
+				currentSlice = append(currentSlice, msg)
+			}
+		}
+	}
+
+	if len(currentSlice) > 0 {
+		newMsgSlice = append(newMsgSlice, strings.Join(currentSlice, "\r"))
+	}
+
+	return newMsgSlice
+}
+
+func SendToDiscord(msgSlice []string) (err error) {
+	msgUnits := ReconstructSlicesforDiscordLimit(msgSlice)
+
+	client, err := CreateDiscordWebHookClient()
+
+	if err != nil {
 		return err
 	}
 
-	msg := strings.Join(msgSlice, "\r")
-
-	client := webhook.NewClient(discord.Snowflake(config.webhookID), config.webhookToken)
-	_, err = client.CreateContent(msg)
+	for _, msg := range msgUnits {
+		_, err = client.CreateContent(msg)
+	}
 
 	return err
 }
@@ -114,6 +160,24 @@ func main() {
 	lambda.Start(HandleRequest)
 }
 ```
+
+## ハマったこと
+
+### DiscordのWebhookで投げることができる文字数は2000文字まで
+
+`400 bad request`とか返ってきていたらこの制限に引っかかっている可能性が高いです。
+
+おそらくこの制限に引っかかっため、CloudWatchのLogEventsのMessageたちを2000文字ごとに分割してリクエストを投げるようにしました。
+
+あらゆるAPIの4xxエラーレスポンスにはきちんとその理由を書いてほしいですね。。。
+
+自分もAPI実装するとき気を付けないといけないですが。
+
+### DiscordのWebhookはレートリミットがある
+
+そりゃあるよね。
+
+短い時間にバンバカ大量にリクエスト送ると`too many requests`と怒られます。
 
 ## 感想
 

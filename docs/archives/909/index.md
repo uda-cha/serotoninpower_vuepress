@@ -121,4 +121,6 @@ func main() {
 
 複雑なinputが来るものは静的型付け言語が楽でいいですね。
 
+[https://github.com/aws/aws-lambda-go](https://github.com/aws/aws-lambda-go)に、lambdacontext/CloudwatchLogsEventの型定義があったので、自分で頑張ってinputされたJsonをパースする構造体を書かなくて良いのが楽でした。
+
 <Comments />

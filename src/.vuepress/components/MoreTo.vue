@@ -2,18 +2,20 @@
 <template>
 <div>
   <p class="more_to">
-    <router-link class="more_to_str" v-bind:to="this.path">
+    <router-link class="more_to_str" v-bind:to="path">
       <slot/>
     </router-link>
   </p>
 </div>
 </template>
-<script>
-export default {
+<script lang="ts">
+import {defineComponent} from 'vue';
+
+export default defineComponent({
   props: {
     path: String,
   },
-};
+});
 </script>
 <style lang="stylus" scoped>
 .more_to

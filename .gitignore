@@ -1,5 +1,7 @@
 node_modules/
 src/.vuepress/dist/*
+src/.vuepress/.cache/*
+src/.vuepress/.temp/*
 .firebase/*
 !.gitkeep
 

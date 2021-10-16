@@ -14,7 +14,7 @@ export default {
   },
   computed: {
     posts() {
-      return this.$site.pages
+      return $site.pages
           .filter((p) => p.path.match(/^\/archives\/\d/))
           .sort((a, b) => (
             new Date(b.frontmatter.date) - new Date(a.frontmatter.date)),

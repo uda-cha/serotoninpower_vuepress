@@ -12,12 +12,17 @@
     <router-link v-bind:to="path">続きを読む</router-link>
   </div>
 </template>
-<script>
-export default {
+<script lang="ts">
+import { defineComponent, PropType } from 'vue';
+import type { PageFrontmatter } from '@vuepress/shared';
+
+export default defineComponent({
   props: {
     path: String,
     title: String,
-    frontmatter: Object,
+    frontmatter: {
+      type: Object as PropType<PageFrontmatter>
+    },
   },
-};
+});
 </script>

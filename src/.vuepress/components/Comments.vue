@@ -33,38 +33,33 @@
       </div>
   </div>
 </template>
-<script>
-export default {
+<script lang="ts">
+import {defineComponent} from 'vue';
+
+export default defineComponent({
   data: function() {
-    comments: Array;
-    loading: Boolean;
-    sending: Boolean;
-    name: String;
-    content: String;
-    getErrorCode: Number;
-    postErrorCode: Number;
     return {
       comments: [],
       loading: true,
       sending: false,
-      name: null,
-      content: null,
+      name: "",
+      content: "",
       getErrorCode: 0,
       postErrorCode: 0,
     };
   },
   computed: {
-    comment_url: function() {
+    comment_url: function(): string {
       return 'https://cms.serotoninpower.club/v1/posts/' +
-        this.$page.regularPath.split('/').slice(-2)[0] +
+        this.$page.path.split('/').slice(-2)[0] +
         '/comments';
     },
-    postable: function() {
+    postable: function(): boolean {
       return Boolean(this.name && this.content && !this.sending);
     },
   },
   methods: {
-    get_comments: function() {
+    get_comments: function(): void {
       this.loading = true;
       fetch(this.comment_url, {
         method: 'GET',
@@ -77,7 +72,7 @@ export default {
               return response.json();
             } else {
               return Promise.reject(response);
-            };
+            }
           })
           .then((data) => {
             this.comments = data.data;
@@ -89,7 +84,7 @@ export default {
             this.loading = false;
           });
     },
-    post_comment: function() {
+    post_comment: function(): void {
       this.sending = true;
       this.postErrorCode = 0;
       if (this.name && this.content) {
@@ -110,9 +105,9 @@ export default {
                 return response.json();
               } else {
                 return Promise.reject(response);
-              };
+              }
             })
-            .then((data) => {
+            .then(() => {
               this.name = this.content = null;
               this.get_comments();
             })
@@ -122,17 +117,16 @@ export default {
             .finally(() => {
               this.sending = false;
             });
-      };
+      }
     },
   },
-  mounted: function() {
+  mounted: function(): void {
     this.get_comments();
   },
-};
+});
 </script>
 <style lang="stylus" scoped>
 .loading
-  background:url(/loading.gif) center center no-repeat
   width 100%
   height 200px
 

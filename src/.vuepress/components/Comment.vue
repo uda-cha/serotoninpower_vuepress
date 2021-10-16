@@ -15,15 +15,17 @@
     </div>
   </div>
 </template>
-<script>
-export default {
+<script lang="ts">
+import {defineComponent} from 'vue';
+
+export default defineComponent({
   props: {
     idx: Number,
     name: String,
     content: String,
     updated_at: String,
   },
-};
+});
 </script>
 <style lang="stylus" scoped>
 .comment

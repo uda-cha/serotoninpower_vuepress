@@ -8,17 +8,19 @@
     </ul>
   </span>
 </template>
-<script>
-export default {
+<script lang="ts">
+import { defineComponent } from 'vue'
+
+export default defineComponent({
   props: {
     input_categories: Array,
   },
   computed: {
-    categories() {
+    categories(): Array<string> {
       return this.input_categories || this.$page.frontmatter.categories;
     },
   },
-};
+});
 </script>
 <style lang="stylus" scoped>
 .categories

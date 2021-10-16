@@ -3,41 +3,41 @@
   <span v-bind:class="{active: isActive(categoryName)}">
     <router-link
       v-bind:to="{path: '/categories/', query: toggleQuery(categoryName)}">
-      {{ categoryName }}{{ categoryNumber | showCategoryNumber }}
+      {{ categoryName }}{{ showCategoryNumber(categoryNumber) }}
     </router-link>
   </span>
 </template>
-<script>
-export default {
+<script lang="ts">
+import { defineComponent } from 'vue'
+
+export default defineComponent({
   props: {
     categoryName: String,
     categoryNumber: Number,
     allwaysActive: Boolean,
   },
   methods: {
-    isActive: function(c) {
+    isActive: function(c: string): boolean {
       return this.allwaysActive ||
           (this.$route.query.category &&
            this.$route.query.category.includes(c));
     },
-    toggleQuery: function(c) {
+    toggleQuery: function(c: string) {
       const query = Object.assign({}, this.$route.query);
       if (query.category && query.category.includes(c)) {
         delete query.category;
       } else {
         query.category = c;
-      };
+      }
       return query;
     },
-  },
-  filters: {
-    showCategoryNumber: function(v) {
+    showCategoryNumber: function(v?: number): string | void {
       if (v) {
         return ' (' + v + ')';
-      };
+      }
     },
   },
-};
+});
 </script>
 <style lang="stylus" scoped>
 span

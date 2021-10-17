@@ -120,11 +120,19 @@ func SendToDiscord(msgSlice []string) (err error) {
 		return err
 	}
 
+	var errs []error
+
 	for _, msg := range msgUnits {
-		_, err = client.CreateContent(msg)
+		if _, err := client.CreateContent(msg); err != nil {
+			errs = append(errs, err)
+		}
 	}
 
-	return err
+	if len(errs) > 0 {
+		return fmt.Errorf("errors: %v", errs)
+	}
+
+	return
 }
 
 func ParseAWSLogsToStringSlice(awsLogs events.CloudwatchLogsRawData) (msgSlice []string, err error) {

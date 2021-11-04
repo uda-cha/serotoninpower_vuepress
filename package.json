@@ -3,9 +3,6 @@
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
-  "directories": {
-    "doc": "docs"
-  },
   "dependencies": {},
   "devDependencies": {
     "@vuepress/plugin-back-to-top": "^1.8.2",
@@ -23,10 +20,10 @@
     "vuepress-plugin-sitemap": "^2.3.1"
   },
   "scripts": {
-    "dev": "vuepress dev docs",
-    "build": "vuepress build docs",
-    "lint": "eslint docs/.vuepress/components/* --no-ignore",
-    "mdlint": "markdownlint docs/archives"
+    "dev": "vuepress dev src",
+    "build": "vuepress build src",
+    "lint": "eslint src/.vuepress/components/* --no-ignore",
+    "mdlint": "markdownlint src/archives"
   },
   "keywords": [],
   "author": "",

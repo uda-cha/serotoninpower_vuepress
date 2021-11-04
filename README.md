@@ -43,7 +43,7 @@ $ docker-compose run --rm node npm run mdlint --silent
 ```json
 {
  "hosting": {
-   "public": "./docs/.vuepress/dist",
+   "public": "./src/.vuepress/dist",
    "ignore": []
  }
 }

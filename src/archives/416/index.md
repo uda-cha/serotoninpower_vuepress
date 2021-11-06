@@ -106,7 +106,7 @@ Red Hat
 
 ## PowershellとXPathNavigator
 
-XMLクラスの持つ`CreateNavigator()`メソッドを利用すると、XMLオブジェクトを`XPathNavigator`オブジェクトに変換することができます。</span>
+XMLクラスの持つ`CreateNavigator()`メソッドを利用すると、XMLオブジェクトを`XPathNavigator`オブジェクトに変換することができます。
 
 ```powershell
 PS C:\work> $MYXML = [xml](Get-Content .\test.xml)
